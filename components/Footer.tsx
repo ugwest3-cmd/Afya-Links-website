@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="font-bold text-white mb-4 flex items-center gap-2">
-              <div className="w-6 h-6 bg-gradient-to-br from-primary-400 to-accent-400 rounded" />
+              <Image src="/assets/logo.png" alt="Afya Links" width={24} height={24} className="w-6 h-6" />
               Afya Links
             </h3>
             <p className="text-sm text-gray-400">

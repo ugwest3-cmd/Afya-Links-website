@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Register - Afya Links',
@@ -9,6 +10,7 @@ export default function Register() {
   const registrationTypes = [
     {
       title: 'Clinic Registration',
+      icon: 'clinic-app',
       description: 'Register your clinic to start sourcing medicines from verified pharmacies.',
       steps: [
         'Download the Clinic App',
@@ -22,6 +24,7 @@ export default function Register() {
     },
     {
       title: 'Pharmacy Registration',
+      icon: 'pharmacy-app',
       description: 'Register your pharmacy to receive orders from clinics and earn commission.',
       steps: [
         'Download the Pharmacy App',
@@ -37,6 +40,7 @@ export default function Register() {
     },
     {
       title: 'Driver Registration',
+      icon: 'delivery-app',
       description: 'Join our driver network and earn income from verified medicine deliveries.',
       steps: [
         'Download the Driver App',
@@ -69,6 +73,9 @@ export default function Register() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {registrationTypes.map((type, idx) => (
               <div key={idx} className="border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div className="mb-6">
+                  <Image src={`/assets/${type.icon}.png`} alt={type.title} width={80} height={80} className="w-20 h-20" />
+                </div>
                 <h2 className="heading-3 mb-4">{type.title}</h2>
                 <p className="text-gray-600 mb-6">{type.description}</p>
 

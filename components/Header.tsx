@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -11,8 +12,8 @@ export default function Header() {
       <nav className="container-custom flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg" />
-          <span className="hidden sm:inline font-bold text-xl text-gray-900">Afya Links</span>
+          <Image src="/assets/logo.png" alt="Afya Links" width={40} height={40} className="w-10 h-10" />
+          <span className="hidden sm:inline font-bold text-lg text-gray-900 leading-none">Afya Links</span>
         </Link>
 
         {/* Desktop Navigation */}

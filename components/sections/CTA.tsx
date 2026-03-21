@@ -1,6 +1,13 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function CTA() {
+  const apps = [
+    { name: 'Clinic App', icon: 'clinic-app', link: 'https://play.google.com/store/apps/details?id=com.afyalinks.clinic' },
+    { name: 'Pharmacy App', icon: 'pharmacy-app', link: 'https://play.google.com/store/apps/details?id=com.afyalinks.pharmacy' },
+    { name: 'Delivery App', icon: 'delivery-app', link: 'https://play.google.com/store/apps/details?id=com.afyalinks.driver' },
+  ]
+
   return (
     <section className="section-padding bg-gradient-to-r from-primary-600 to-accent-600 text-white">
       <div className="container-custom text-center">
@@ -20,20 +27,20 @@ export default function CTA() {
 
         {/* App Download */}
         <div id="download" className="mt-12">
-          <p className="text-sm text-gray-200 mb-4">Download our apps:</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://apps.apple.com"
-              className="inline-flex items-center justify-center px-6 py-2 bg-white/10 border border-white/30 rounded-lg hover:bg-white/20 transition"
-            >
-              <span>📱 iOS App</span>
-            </a>
-            <a
-              href="https://play.google.com"
-              className="inline-flex items-center justify-center px-6 py-2 bg-white/10 border border-white/30 rounded-lg hover:bg-white/20 transition"
-            >
-              <span>🤖 Android App</span>
-            </a>
+          <p className="text-sm text-gray-200 mb-6">Download our apps:</p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            {apps.map((app, idx) => (
+              <a
+                key={idx}
+                href={app.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex flex-col items-center gap-3 px-6 py-4 bg-white/10 border border-white/30 rounded-lg hover:bg-white/20 transition"
+              >
+                <Image src={`/assets/${app.icon}.png`} alt={app.name} width={48} height={48} className="w-12 h-12 rounded" />
+                <span className="text-sm font-semibold">{app.name}</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
