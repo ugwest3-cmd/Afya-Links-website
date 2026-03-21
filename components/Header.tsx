@@ -22,10 +22,17 @@ export default function Header() {
       <nav className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center transition-transform group-hover:scale-105">
-            <Image src="/assets/logo.png" alt="Afya Links" width={32} height={32} className="w-8 h-8 object-contain" />
+          <div className="relative w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
+            <Image 
+              src="/assets/logo.png" 
+              alt="Afya Links Logo" 
+              width={48} 
+              height={48} 
+              className="w-full h-full object-contain" 
+              priority
+            />
           </div>
-          <span className="hidden sm:inline font-bold text-xl text-[#1D1D1F] tracking-tight">Afya Links</span>
+          <span className="hidden sm:inline font-bold text-2xl text-[#1D1D1F] tracking-tight">Afya Links</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -84,8 +91,9 @@ export default function Header() {
               </div>
             ))}
             <div className="pt-6 border-t border-gray-100 flex flex-col gap-4">
-              <Link href="/get-started" className="btn-apple-primary text-center" onClick={() => setIsOpen(false)}>
-                Join Now
+              <Link href="/get-started" className="btn-apple-primary !py-4 text-center text-lg flex items-center justify-center gap-2" onClick={() => setIsOpen(false)}>
+                Get Started
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>

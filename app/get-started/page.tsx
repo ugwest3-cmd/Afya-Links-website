@@ -105,15 +105,43 @@ export default function GetStarted() {
 
                 {/* Preview */}
                 <div className="flex-1 w-full max-w-sm lg:max-w-md">
-                  <div className="relative aspect-[9/19] rounded-[3rem] border-[12px] border-gray-900 shadow-2xl overflow-hidden bg-gray-900">
+                  <div className="relative aspect-[9/19] rounded-[3rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden bg-gray-50 flex items-center justify-center">
                     <Image 
                       src={app.screenshot} 
                       alt={app.name} 
                       fill
-                      className="object-cover"
+                      className="object-contain p-2"
                     />
                   </div>
+                  <div className="mt-6 flex justify-center gap-2">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className={`w-2 h-2 rounded-full ${i === 1 ? 'bg-primary-600' : 'bg-gray-200'}`}></div>
+                    ))}
+                  </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Installation Guide */}
+      <section className="section-padding bg-gray-900 text-white">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="heading-2 text-white mb-4">How to Install</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Follow these simple steps to get the app running on your Android device.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {[
+              { step: '01', title: 'Download APK', desc: 'Click the download button for your specific role above.' },
+              { step: '02', title: 'Allow Install', desc: 'If prompted, allow installation from "Unknown Sources" in settings.' },
+              { step: '03', title: 'Launch & Login', desc: 'Open the app and use your credentials to start working.' }
+            ].map((step, idx) => (
+              <div key={idx} className="relative p-8 rounded-3xl bg-white/5 border border-white/10">
+                <div className="text-4xl font-black text-white/10 absolute top-4 right-8">{step.step}</div>
+                <h3 className="text-xl font-bold mb-4">{step.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>

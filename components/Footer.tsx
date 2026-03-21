@@ -42,10 +42,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
-              <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center transition-transform group-hover:scale-105">
-                <Image src="/assets/logo.png" alt="Afya Links" width={32} height={32} className="w-8 h-8 object-contain" />
+              <div className="relative w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
+                <Image 
+                  src="/assets/logo.png" 
+                  alt="Afya Links Logo" 
+                  width={48} 
+                  height={48} 
+                  className="w-full h-full object-contain" 
+                />
               </div>
-              <span className="font-bold text-xl text-[#1D1D1F] tracking-tight">Afya Links</span>
+              <span className="font-bold text-2xl text-[#1D1D1F] tracking-tight">Afya Links</span>
             </Link>
             <p className="text-[#86868B] text-lg max-w-sm mb-8 font-medium leading-relaxed">
               Redefining pharmaceutical distribution with precision, speed, and digital trust.
