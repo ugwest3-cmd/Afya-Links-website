@@ -98,8 +98,8 @@ export default function AboutUs() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">Africa's Talking</h3>
-                <p>We use Africa's Talking for SMS notifications and communication services, keeping all participants informed throughout the delivery lifecycle.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Africa&apos;s Talking</h3>
+                <p>We use Africa&apos;s Talking for SMS notifications and communication services, keeping all participants informed throughout the delivery lifecycle.</p>
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function AboutUs() {
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                 <p className="text-gray-600 italic">
-                  "Afya Links does not manufacture medicines and does not alter pharmaceutical products. All participants are responsible for complying with applicable healthcare regulations."
+                  &quot;Afya Links does not manufacture medicines and does not alter pharmaceutical products. All participants are responsible for complying with applicable healthcare regulations.&quot;
                 </p>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Legal - Afya Links Policies & Terms',
@@ -67,7 +68,7 @@ export default function Legal() {
                 <p>Delivery riders are independent contractors and not employees of Afya Links. We are not responsible for delivery delays, rider conduct, or damages during transportation.</p>
 
                 <h3 className="text-xl font-bold mt-8 mb-4">6. Limitation of Liability</h3>
-                <p>Afya Links provides the platform “as is”. We are not liable for incorrect prescriptions, medicine quality, clinical outcomes, or misuse of medicines. Healthcare providers remain responsible for all medical decisions.</p>
+                <p>Afya Links provides the platform &quot;as is&quot;. We are not liable for incorrect prescriptions, medicine quality, clinical outcomes, or misuse of medicines. Healthcare providers remain responsible for all medical decisions.</p>
               </section>
 
               <section id="privacy" className="mb-16 scroll-mt-24">
@@ -116,8 +117,8 @@ export default function Legal() {
                 <h2 className="heading-2 mb-6 border-b pb-4">Platform Disclaimer</h2>
                 <p>Afya Links is a logistics and digital ordering platform. We do not provide medical advice, diagnose diseases, or prescribe treatments. Healthcare providers remain fully responsible for patient care.</p>
                 <div className="mt-8 space-y-6">
-                  <img src="https://lh3.googleusercontent.com/sitesv/APaQ0SSrlX847VJr868B7vqIBzn_h8uTDOAYiuUHisPmMrBSH9sUnxcOvKOrtPD4x03A0V0MBLy2ri9K6oUpR4Z6EXB4hdkamTuOuBOPzQ_MkXAUzLQlo3ym0CDGc008ea8PQ3Pig8svh7f9YiJ2r2kxiqz9UlFWeno0bGiZ9Y_Y4DfZaHLQkgeshz2xHYkJv1o32GjtaFwydgXN1qzcX53zPekUpeD5RkFWpvx3=w1280" alt="Safety Standard 1" className="rounded-xl border border-gray-100 shadow-sm w-full" />
-                  <img src="https://lh3.googleusercontent.com/sitesv/APaQ0SQJXZ2LJdMh2RyL1TPPTGHrwWZLg_OyRiYZZzj4ygzZMOr1ZBc9tVzPi_LmtKMwsY05ax4hqfIa7NjpipYFr_IC6vyxC5VpzqG-C2z_GguKYSzRuLlJAVtR6hgXpSXxRF-3ghAYJrbucnWgdsjI_dIi3lMzYim2eCNoAuq8u-4Jo48qZdHiw5nJVmIeZv_6IAxwyAhekN6W8P3vX5IQ8mjB7Y9WIpLyDvTb7_4=w1280" alt="Safety Standard 2" className="rounded-xl border border-gray-100 shadow-sm w-full" />
+                  <Image src="https://lh3.googleusercontent.com/sitesv/APaQ0SSrlX847VJr868B7vqIBzn_h8uTDOAYiuUHisPmMrBSH9sUnxcOvKOrtPD4x03A0V0MBLy2ri9K6oUpR4Z6EXB4hdkamTuOuBOPzQ_MkXAUzLQlo3ym0CDGc008ea8PQ3Pig8svh7f9YiJ2r2kxiqz9UlFWeno0bGiZ9Y_Y4DfZaHLQkgeshz2xHYkJv1o32GjtaFwydgXN1qzcX53zPekUpeD5RkFWpvx3=w1280" alt="Safety Standard 1" width={1280} height={720} className="rounded-xl border border-gray-100 shadow-sm w-full h-auto" />
+                  <Image src="https://lh3.googleusercontent.com/sitesv/APaQ0SQJXZ2LJdMh2RyL1TPPTGHrwWZLg_OyRiYZZzj4ygzZMOr1ZBc9tVzPi_LmtKMwsY05ax4hqfIa7NjpipYFr_IC6vyxC5VpzqG-C2z_GguKYSzRuLlJAVtR6hgXpSXjRF-3ghAYJrbucnWgdsjI_dIi3lMzYim2eCNoAuA8u-4Jo48qZdHiw5nJVmIeZv_6IAxwyAhekN6W8P3vX5IQ8mjB7Y9WIpLyDvTb7_4=w1280" alt="Safety Standard 2" width={1280} height={720} className="rounded-xl border border-gray-100 shadow-sm w-full h-auto" />
                 </div>
               </section>
 

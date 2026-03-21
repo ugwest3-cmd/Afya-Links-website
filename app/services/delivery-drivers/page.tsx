@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -48,11 +49,13 @@ export default function DeliveryDrivers() {
             </div>
             <div className="relative">
               <div className="bg-gray-100 rounded-3xl p-8 border border-gray-200">
-                <img 
-                  src="https://lh3.googleusercontent.com/sitesv/APaQ0SSNX8DVoIvpmJNGJIaIiU3QM1JURDbFEly6BJ1sHsFjZQ2JGNjcpHr0Q_k0KvH7rGidm6qWtH0LKSL7LZME7bIbv0J6WiUOrBVtDyqhnKjIDHc_6GJBHvoucDC-Y6BunL_bCkENGfRBCNfh-AgEDEdRhDM5mfpvwUHVlx-sybnQntoBdag0tvVoitSZYIiJSv_MNP-pZlCBaTB5AluvZlMMAoUYds-N7kdBbb8=w1280" 
-                  alt="Delivery Driver App Interface" 
-                  className="rounded-xl shadow-2xl w-full max-w-sm mx-auto"
-                />
+                 <Image 
+                   src="https://lh3.googleusercontent.com/sitesv/APaQ0SSNX8DVoIvpmJNGJIaIiU3QM1JURDbFEly6BJ1sHsFjZQ2JGNjcpHr0Q_k0KvH7rGidm6qWtH0LKSL7LZME7bIbv0J6WiUOrBVtDyqhnKjIDHc_6GJBHvoucDC-Y6BunL_bCkENGfRBCNfh-AgEDEdRhDM5mfpvwUHVlx-sybnQntoBdag0tvVoitSZYIiJSv_MNP-pZlCBaTB5AluvZlMMAoUYds-N7kdBbb8=w1280" 
+                   alt="Delivery Driver App Interface" 
+                   width={600}
+                   height={800}
+                   className="rounded-xl shadow-2xl w-full max-w-sm mx-auto h-auto"
+                 />
               </div>
             </div>
           </div>

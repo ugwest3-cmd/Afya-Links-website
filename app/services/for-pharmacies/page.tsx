@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'For Wholesale Pharmacies - Afya Links',
@@ -31,10 +32,12 @@ export default function ForPharmacies() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div className="order-2 lg:order-1">
-               <img 
+               <Image 
                   src="https://lh3.googleusercontent.com/sitesv/APaQ0SQKjF_WPKbSEhiChTIKl3ufD5159sVkjJmbSKxS78c-biadH962l763e6GfCHZh6d2PA-hRymZG3Mjhy338nHhsPk2MwF_1UPSgpHhQ7BRgheDYFm83GXsL-njiHuQ9VBUN2yUrYOBH1tFgBwLnsNk77_LkpmEMRtUXZUwMlzxVeAWm7FgKo9MJQDU7RlDu76_KyrZWC8EVEVXTuI0UD_t4RfYttUe7Tg2X5iQ=w1280" 
                   alt="Expand Your Distribution" 
-                  className="rounded-2xl shadow-xl w-full border border-gray-100"
+                  width={1280}
+                  height={800}
+                  className="rounded-2xl shadow-xl w-full h-auto border border-gray-100"
                 />
             </div>
             <div className="order-1 lg:order-2">
@@ -89,7 +92,7 @@ export default function ForPharmacies() {
                    <h3 className="font-bold text-gray-900 mb-2">{tool.title}</h3>
                    <p className="text-gray-600 text-sm mb-4">{tool.desc}</p>
                 </div>
-                <img src={tool.img} alt={tool.title} className="w-full h-auto" />
+                <Image src={tool.img} alt={tool.title} width={600} height={400} className="w-full h-auto" />
               </div>
             ))}
           </div>

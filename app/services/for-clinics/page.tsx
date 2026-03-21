@@ -57,11 +57,13 @@ export default function ForClinics() {
             </div>
             <div className="relative">
               <div className="bg-primary-100 rounded-3xl p-4 transform rotate-1">
-                <img 
-                  src="https://lh3.googleusercontent.com/sitesv/APaQ0SRWDDjualJp88zv8SqqrerhLp2rt7ASq1zy493o9ejeddTsdOwJEUwJD98tlQ3lyKFrAu0teVAXVMojaaQYT_x5CI8kziG_f_sLXl4wh-EJ1ESxKRPDKPxJmGSAWe1owvqckSUdUVW8t9D-jShAyxE21TodKSXVlU5U1NSh-8nVkZGZs0u4YGClJpU=w1280" 
-                  alt="Choose Pharmacy Interface" 
-                  className="rounded-2xl shadow-xl w-full"
-                />
+                 <Image 
+                   src="https://lh3.googleusercontent.com/sitesv/APaQ0SRWDDjualJp88zv8SqqrerhLp2rtASq1zy493o9ejeddTsdOwJEUwJD98tlQ3lyKFrAu0teVAXVMojaaQYT_x5CI8kziG_f_sLXl4wh-EJ1ESxKRPDKPxJmGSAWe1owvqckSUdUVW8t9D-jShAyxE21TodKSXVlU5U1NSh-8nVkZGZs0u4YGClJpU=w1280" 
+                   alt="Choose Pharmacy Interface" 
+                   width={1280}
+                   height={800}
+                   className="rounded-2xl shadow-xl w-full h-auto"
+                 />
               </div>
             </div>
           </div>
@@ -110,7 +112,7 @@ export default function ForClinics() {
                 </div>
                 <h3 className="font-bold text-gray-900 mb-3">{step.title}</h3>
                 <div className="mb-4 overflow-hidden rounded-lg border border-gray-100 shadow-sm">
-                  <img src={step.img} alt={step.title} className="w-full h-auto object-cover group-hover:scale-105 transition duration-300" />
+                  <Image src={step.img} alt={step.title} width={600} height={400} className="w-full h-auto object-cover group-hover:scale-105 transition duration-300" />
                 </div>
                 <p className="text-sm text-gray-600">{step.desc}</p>
               </div>
