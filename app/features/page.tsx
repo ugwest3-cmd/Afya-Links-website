@@ -64,7 +64,9 @@ export default function Features() {
                 {clinicFeatures.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <span className="w-6 h-6 rounded-full bg-success-100 text-success-700 flex items-center justify-center text-sm">✓</span>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-700">
+                      <strong>{feature.title}:</strong> {feature.desc}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -88,7 +90,9 @@ export default function Features() {
                 {pharmacyFeatures.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <span className="w-6 h-6 rounded-full bg-success-100 text-success-700 flex items-center justify-center text-sm">✓</span>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-700">
+                      <strong>{feature.title}:</strong> {feature.desc}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -110,7 +114,9 @@ export default function Features() {
                 {driverFeatures.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <span className="w-6 h-6 rounded-full bg-success-100 text-success-700 flex items-center justify-center text-sm">✓</span>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-700">
+                      <strong>{feature.title}:</strong> {feature.desc}
+                    </span>
                   </li>
                 ))}
               </ul>
