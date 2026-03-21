@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { 
   Zap, 
   TrendingUp, 
-  Truck, 
   Smartphone, 
   ShieldCheck, 
   Coins, 
