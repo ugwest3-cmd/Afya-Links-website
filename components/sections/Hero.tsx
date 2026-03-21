@@ -29,7 +29,7 @@ export default function Hero() {
           >
             Digital logistics <br className="hidden md:block" />
             <span className="text-[#0071E3]">for medicine supply.</span>
-          </h1 >
+          </h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
