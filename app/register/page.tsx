@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Register - Afya Links',
@@ -102,7 +101,7 @@ export default function Register() {
             {[
               {
                 q: 'How long does verification take?',
-                a: 'Verification typically takes 24-48 hours after you submit your documents. You'll receive a notification once approved.'
+                a: "Verification typically takes 24-48 hours after you submit your documents. You'll receive a notification once approved."
               },
               {
                 q: 'What documents do I need?',
@@ -114,12 +113,12 @@ export default function Register() {
               },
               {
                 q: 'What if my documents are incomplete?',
-                a: 'We'll notify you if documents are incomplete. You can resubmit at any time until approved.'
+                a: "We'll notify you if documents are incomplete. You can resubmit at any time until approved."
               },
               {
                 q: 'Can I register multiple locations?',
-                a: 'Yes. Each location needs its own registration with separate documents.'
-              },
+                a: "Yes. Each location needs its own registration with separate documents."
+              }
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-6 rounded-lg border border-gray-200">
                 <h3 className="font-semibold text-lg mb-2 text-gray-900">{item.q}</h3>
