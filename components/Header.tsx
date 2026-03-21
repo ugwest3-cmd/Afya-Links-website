@@ -21,14 +21,14 @@ export default function Header() {
     }`}>
       <nav className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105">
+        <Link href="/" className="flex items-center gap-4 group">
+          <div className="relative w-14 h-14 flex items-center justify-center transition-transform group-hover:scale-105">
             <Image 
               src="/assets/logo.png" 
               alt="Afya Links Logo" 
-              width={48} 
-              height={48} 
-              className="w-full h-full object-contain" 
+              width={56} 
+              height={56} 
+              className="w-full h-full object-contain drop-shadow-sm" 
               priority
             />
           </div>

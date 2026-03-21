@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Download, CheckCircle2, ArrowRight, ShieldCheck, Zap } from 'lucide-react'
+import { Download, CheckCircle2, ArrowRight, ShieldCheck, Zap, Smartphone, ClipboardCheck, UserCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Get Started - Afya Links',
@@ -12,112 +12,166 @@ export default function GetStarted() {
     {
       id: 'clinic',
       name: 'Clinic App',
-      icon: '🏥',
-      color: 'bg-blue-600',
-      tagline: 'Best for: Private Clinics & Drug Shops',
-      desc: 'Sourcing, price comparison, and digital order tracking.',
+      icon: <Smartphone className="w-8 h-8" />,
+      themeColor: 'blue',
+      bgColor: 'bg-blue-500',
+      tagline: 'For Private Clinics & Drug Shops',
+      desc: 'Source medicines, compare prices, and track orders in real-time.',
       downloadUrl: '/downloads/clinic.apk',
-      screenshot: '/assets/clinic-preview.jpg'
+      screenshot: '/assets/clinic-preview.jpg',
+      steps: [
+        'Download the Clinic App',
+        'Enter phone number + OTP',
+        'Upload business license',
+        'Wait for admin verification',
+        'Start ordering!'
+      ]
     },
     {
       id: 'pharmacy',
       name: 'Pharmacy App',
-      icon: '💊',
-      color: 'bg-primary-600',
-      tagline: 'Best for: Wholesales & Distributors',
-      desc: 'Inventory management, digital invoicing, and settlement tracking.',
+      icon: <Zap className="w-8 h-8" />,
+      themeColor: 'primary',
+      bgColor: 'bg-primary-600',
+      tagline: 'For Wholesales & Distributors',
+      desc: 'Manage inventory, handle digital invoicing, and track settlements.',
       downloadUrl: '/downloads/pharmacy.apk',
-      screenshot: '/assets/pharmacy-preview.jpg'
+      screenshot: '/assets/pharmacy-preview.jpg',
+      steps: [
+        'Download the Pharmacy App',
+        'Enter business details',
+        'Upload pharmacy license',
+        'Upload business registration',
+        'Wait for verification',
+        'Upload price list CSV',
+        'Start receiving orders!'
+      ]
     },
     {
       id: 'delivery',
       name: 'Driver App',
-      icon: '🚚',
-      color: 'bg-gray-900',
-      tagline: 'Best for: Independent Delivery Drivers',
-      desc: 'Verified delivery requests and instant payment settlements.',
+      icon: <Smartphone className="w-8 h-8" />,
+      themeColor: 'gray',
+      bgColor: 'bg-gray-900',
+      tagline: 'For Independent Delivery Drivers',
+      desc: 'Get verified delivery requests and receive instant payments.',
       downloadUrl: '/downloads/delivery.apk',
-      screenshot: '/assets/clinic-preview.jpg' // Using clinic as fallback or generic
+      screenshot: '/assets/clinic-preview.jpg',
+      steps: [
+        'Download the Driver App',
+        'Create account with phone number',
+        'Provide vehicle information',
+        'Accept terms & conditions',
+        'Verification approval',
+        'Start accepting deliveries!'
+      ]
     }
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#F5F5F7]">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-gray-50 to-white pt-24 pb-16">
-        <div className="container-custom text-center max-w-4xl">
-          <h1 className="heading-1 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-primary-700 to-gray-900">
-            Start Your Journey with Afya Links
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="container-custom relative z-10 text-center max-w-4xl">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-gray-200 shadow-sm mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span className="text-sm font-bold text-gray-600 uppercase tracking-widest">Direct Distribution</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black text-[#1D1D1F] tracking-tight mb-8 leading-[1.1]">
+            One platform.<br />
+            <span className="text-[#0071E3]">Three specialized apps.</span>
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed mb-10">
-            Join the digital healthcare ecosystem. Download the relevant app for your role and transform how you source, sell, or deliver medicines.
+          <p className="text-xl md:text-2xl text-[#86868B] leading-relaxed mb-12 max-w-2xl mx-auto font-medium">
+            Everything you need to digitize your pharmaceutical supply chain, available for direct download.
           </p>
+        </div>
+        
+        {/* Abstract background elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none -z-10">
+          <div className="absolute top-[10%] left-[-5%] w-[40%] h-[40%] bg-blue-100/40 blur-[100px] rounded-full" />
+          <div className="absolute top-[20%] right-[-5%] w-[40%] h-[40%] bg-primary-100/30 blur-[100px] rounded-full" />
         </div>
       </section>
 
       {/* App Grid */}
-      <section className="pb-24">
+      <section className="pb-32">
         <div className="container-custom">
-          <div className="grid grid-cols-1 gap-20">
+          <div className="grid grid-cols-1 gap-32">
             {apps.map((app, idx) => (
               <div 
                 key={app.id} 
-                className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-24 items-center`}
+                className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 lg:gap-24 items-start`}
               >
                 {/* Content */}
-                <div className="flex-1 w-full">
-                  <div className={`inline-flex items-center gap-2 px-4 py-1 rounded-full ${app.color} text-white text-xs font-bold uppercase tracking-widest mb-6`}>
-                    {app.name}
+                <div className="flex-1 w-full bg-white rounded-[40px] p-8 md:p-12 shadow-xl shadow-gray-200/50 border border-gray-100">
+                  <div className={`w-16 h-16 rounded-2xl ${app.bgColor} text-white flex items-center justify-center mb-8 shadow-lg`}>
+                    {app.icon}
                   </div>
-                  <h2 className="heading-2 mb-4 text-gray-900">{app.tagline}</h2>
-                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  <h2 className="text-4xl font-black text-[#1D1D1F] mb-4">{app.name}</h2>
+                  <p className="text-lg font-bold text-[#0071E3] mb-6 uppercase tracking-wider">{app.tagline}</p>
+                  <p className="text-lg text-[#86868B] mb-10 leading-relaxed font-medium">
                     {app.desc}
                   </p>
                   
-                  <div className="space-y-4 mb-10">
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center">
-                        <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      </div>
-                      <span className="text-gray-700 font-medium">Direct APK Download (Safe & Verified)</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center">
-                        <CheckCircle2 className="w-4 h-4 text-green-600" />
-                      </div>
-                      <span className="text-gray-700 font-medium">Real-time order synchronization</span>
+                  {/* Registration Steps */}
+                  <div className="mb-12">
+                    <h3 className="text-sm font-black text-gray-900 uppercase tracking-widest mb-6 flex items-center gap-2">
+                       <ClipboardCheck className="w-5 h-5 text-[#0071E3]" />
+                       Registration Steps
+                    </h3>
+                    <div className="space-y-4">
+                      {app.steps.map((step, sIdx) => (
+                        <div key={sIdx} className="flex items-start gap-4">
+                          <div className={`w-6 h-6 rounded-full ${app.bgColor} text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5`}>
+                            {sIdx + 1}
+                          </div>
+                          <span className="text-gray-700 font-medium leading-tight">{step}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  <a 
-                    href={app.downloadUrl}
-                    download
-                    className={`inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gray-900 text-white font-bold hover:bg-black transition-all shadow-xl shadow-gray-200 group w-full sm:w-auto justify-center`}
-                  >
-                    <Download className="w-5 h-5 transition-transform group-hover:scale-110" />
-                    Download {app.name} (APK)
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a 
+                      href={app.downloadUrl}
+                      download
+                      className={`flex items-center gap-4 px-8 py-4 rounded-2xl bg-[#1D1D1F] text-white hover:bg-black transition-all group shadow-2xl shadow-gray-900/20`}
+                    >
+                      <div className="bg-white/10 rounded-lg p-2 group-hover:bg-white/20 transition-colors">
+                        <Download className="w-6 h-6" />
+                      </div>
+                      <div className="text-left">
+                        <p className="text-[10px] uppercase font-black tracking-[0.2em] text-white/50 leading-none mb-1">Download APK</p>
+                        <p className="text-xl font-bold leading-none">{app.name}</p>
+                      </div>
+                    </a>
+                  </div>
                   
-                  <p className="mt-4 text-xs text-gray-400">
-                    Version 1.0.2 • Requires Android 7.0+ • ~50MB
-                  </p>
+                  <div className="mt-8 flex items-center gap-6 text-xs text-gray-400 font-bold uppercase tracking-widest">
+                    <span className="flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-green-500" />
+                      Verified Secure
+                    </span>
+                    <span>v1.0.2</span>
+                    <span>Android 7.0+</span>
+                  </div>
                 </div>
 
-                {/* Preview */}
-                <div className="flex-1 w-full max-w-sm lg:max-w-md">
-                  <div className="relative aspect-[9/19] rounded-[3rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden bg-gray-50 flex items-center justify-center">
+                {/* Preview Frame */}
+                <div className="flex-1 w-full max-w-sm lg:max-w-md mx-auto lg:mx-0 pt-10 lg:pt-20">
+                  <div className="relative aspect-[9/19] rounded-[3.5rem] border-[12px] border-[#1D1D1F] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] overflow-hidden bg-white">
+                    {/* Inner frame elements */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[30px] bg-[#1D1D1F] rounded-b-[20px] z-20"></div>
+                    
                     <Image 
                       src={app.screenshot} 
                       alt={app.name} 
                       fill
-                      className="object-contain p-2"
+                      className="object-contain p-4 transition-transform duration-700 hover:scale-105"
                     />
                   </div>
-                  <div className="mt-6 flex justify-center gap-2">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className={`w-2 h-2 rounded-full ${i === 1 ? 'bg-primary-600' : 'bg-gray-200'}`}></div>
-                    ))}
-                  </div>
+                  {/* Subtle ground shadow */}
+                  <div className="w-[80%] h-4 bg-black/10 blur-xl rounded-full mx-auto mt-10"></div>
                 </div>
               </div>
             ))}
@@ -125,42 +179,64 @@ export default function GetStarted() {
         </div>
       </section>
 
-      {/* Installation Guide */}
-      <section className="section-padding bg-gray-900 text-white">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="heading-2 text-white mb-4">How to Install</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Follow these simple steps to get the app running on your Android device.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            {[
-              { step: '01', title: 'Download APK', desc: 'Click the download button for your specific role above.' },
-              { step: '02', title: 'Allow Install', desc: 'If prompted, allow installation from "Unknown Sources" in settings.' },
-              { step: '03', title: 'Launch & Login', desc: 'Open the app and use your credentials to start working.' }
-            ].map((step, idx) => (
-              <div key={idx} className="relative p-8 rounded-3xl bg-white/5 border border-white/10">
-                <div className="text-4xl font-black text-white/10 absolute top-4 right-8">{step.step}</div>
-                <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{step.desc}</p>
+      {/* Trust & Verification Section */}
+      <section className="section-padding bg-[#1D1D1F] text-white overflow-hidden relative">
+        <div className="container-custom relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <div className="w-20 h-20 rounded-[24px] bg-[#0071E3] flex items-center justify-center mb-8 shadow-2xl shadow-blue-500/40">
+                <ShieldCheck className="w-10 h-10 text-white" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Safety Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom max-w-4xl">
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
-             <div className="w-20 h-20 rounded-2xl bg-primary-50 flex items-center justify-center shrink-0">
-               <ShieldCheck className="w-10 h-10 text-primary-600" />
-             </div>
-             <div>
-               <h3 className="heading-3 mb-4">Secure & Verified Downloads</h3>
-               <p className="text-gray-600 leading-relaxed">
-                 All APK files listed above are signed and verified by Afya Links Digital Healthcare. We use direct distribution to ensure you get the latest features as soon as they are ready, bypassing store delays.
-               </p>
-             </div>
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
+                Secure distribution.<br />
+                <span className="text-gray-500">No store delays.</span>
+              </h2>
+              <div className="space-y-6">
+                {[
+                  { title: 'Verified Identity', desc: 'Every APK is cryptographically signed and verified by Afya Links.' },
+                  { title: 'Instant Updates', desc: 'Get the latest features and security patches immediately.' },
+                  { title: 'Privacy First', desc: 'No tracking, no ads. Just professional healthcare tools.' }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center shrink-0 mt-1">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold mb-1">{item.title}</h4>
+                      <p className="text-gray-400 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+               <div className="absolute inset-0 bg-[#0071E3] blur-[150px] opacity-20 rounded-full" />
+               <div className="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[40px] p-12 relative overflow-hidden">
+                  <h3 className="text-2xl font-bold mb-6">Partner Requirements</h3>
+                  <div className="space-y-4">
+                    <div className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center gap-4">
+                      <UserCheck className="w-6 h-6 text-[#0071E3]" />
+                      <span className="font-medium">Valid Healthcare or Business License</span>
+                    </div>
+                    <div className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center gap-4">
+                      <UserCheck className="w-6 h-6 text-green-500" />
+                      <span className="font-medium">Verified Phone Number (National ID)</span>
+                    </div>
+                    <div className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center gap-4">
+                      <UserCheck className="w-6 h-6 text-primary-500" />
+                      <span className="font-medium">Approved Physical Business Location</span>
+                    </div>
+                  </div>
+                  <div className="mt-10 p-6 rounded-3xl bg-blue-600 shadow-xl shadow-blue-600/20">
+                    <p className="text-lg font-bold mb-2">Need bulk setup?</p>
+                    <p className="text-blue-100 text-sm mb-6">Contact our deployment team for multi-branch configurations.</p>
+                    <a href="/contact" className="inline-flex items-center gap-2 text-white font-bold hover:gap-4 transition-all">
+                      Contact Partner Support
+                      <ArrowRight className="w-5 h-5" />
+                    </a>
+                  </div>
+               </div>
+            </div>
           </div>
         </div>
       </section>
@@ -168,18 +244,18 @@ export default function GetStarted() {
       {/* Support Section */}
       <section className="section-padding bg-white text-center">
         <div className="container-custom">
-          <h2 className="heading-3 mb-6">Need help getting set up?</h2>
-          <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
-            Our support team is available to help you with installation and account verification.
+          <h2 className="text-3xl font-black mb-6">Need help getting set up?</h2>
+          <p className="text-xl text-[#86868B] mb-12 max-w-2xl mx-auto font-medium">
+            Our specialized support team is available 24/7 to help you with installation and account verification.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-             <a href="mailto:bdplinksapps@gmail.com" className="btn-apple-secondary inline-flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+             <a href="mailto:bdplinksapps@gmail.com" className="btn-apple-secondary inline-flex items-center gap-3 !px-10">
                Email Support
-               <ArrowRight className="w-4 h-4" />
+               <ArrowRight className="w-5 h-5" />
              </a>
-             <a href="https://wa.me/256760680980" target="_blank" className="btn-apple-secondary !border-green-500 !text-green-600 hover:!bg-green-50 inline-flex items-center gap-2">
+             <a href="https://wa.me/256760680980" target="_blank" className="btn-apple-secondary !border-green-500 !text-green-600 hover:!bg-green-50 inline-flex items-center gap-3 !px-10">
                WhatsApp Support
-               <Zap className="w-4 h-4 fill-current" />
+               <Zap className="w-5 h-5 fill-current" />
              </a>
           </div>
         </div>

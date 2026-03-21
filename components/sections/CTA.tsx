@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 export default function CTA() {
   const apps = [
-    { name: 'Clinic App', icon: 'clinic-app', link: 'https://play.google.com/store/apps/details?id=com.afyalinks.clinic' },
-    { name: 'Pharmacy App', icon: 'pharmacy-app', link: 'https://play.google.com/store/apps/details?id=com.afyalinks.pharmacy' },
-    { name: 'Delivery App', icon: 'delivery-app', link: 'https://play.google.com/store/apps/details?id=com.afyalinks.driver' },
+    { name: 'Clinic App', icon: 'logo', link: '/get-started' },
+    { name: 'Pharmacy App', icon: 'logo', link: '/get-started' },
+    { name: 'Delivery App', icon: 'logo', link: '/get-started' },
   ]
 
   return (
@@ -17,10 +17,10 @@ export default function CTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link href="/register" className="px-8 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
-            Get Started Free
+          <Link href="/get-started" className="px-8 py-3 bg-white text-[#0071E3] font-semibold rounded-xl hover:bg-gray-50 transition-all shadow-lg hover:scale-105">
+            Get Started Now
           </Link>
-          <Link href="/contact" className="px-8 py-3 bg-white/20 border border-white text-white font-semibold rounded-lg hover:bg-white/30 transition-colors">
+          <Link href="/contact" className="px-8 py-3 bg-white/10 border-2 border-white/50 text-white font-semibold rounded-xl hover:bg-white/20 transition-all">
             Schedule a Demo
           </Link>
         </div>
@@ -28,18 +28,21 @@ export default function CTA() {
         {/* App Download */}
         <div id="download" className="mt-12">
           <p className="text-sm text-gray-200 mb-6">Download our apps:</p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-wrap gap-6 justify-center">
             {apps.map((app, idx) => (
-              <a
+              <Link
                 key={idx}
-                href={app.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex flex-col items-center gap-3 px-6 py-4 bg-white/10 border border-white/30 rounded-lg hover:bg-white/20 transition"
+                href="/get-started"
+                className="inline-flex items-center gap-4 px-8 py-4 bg-white/10 border border-white/20 rounded-2xl hover:bg-white/20 transition-all group backdrop-blur-sm"
               >
-                <Image src={`/assets/${app.icon}.png`} alt={app.name} width={48} height={48} className="w-12 h-12 rounded" />
-                <span className="text-sm font-semibold">{app.name}</span>
-              </a>
+                <div className="p-2 bg-white rounded-xl shadow-sm">
+                  <Image src={`/assets/${app.icon}.png`} alt={app.name} width={40} height={40} className="w-10 h-10 object-contain" />
+                </div>
+                <div className="text-left">
+                  <p className="text-[10px] uppercase tracking-widest text-white/60 font-bold mb-0.5">Download for Android</p>
+                  <p className="text-lg font-bold text-white">{app.name}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

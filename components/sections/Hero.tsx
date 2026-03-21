@@ -50,7 +50,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <Link href="/register" className="btn-apple-primary flex items-center gap-2 group shadow-xl shadow-blue-500/20">
+            <Link href="/get-started" className="btn-apple-primary flex items-center gap-2 group shadow-xl shadow-blue-500/20">
               Start Sourcing
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
