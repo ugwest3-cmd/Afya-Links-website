@@ -35,19 +35,17 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Email</h4>
-                  <a href="mailto:support@afyalinks.com" className="text-primary-600 hover:underline">
-                    support@afyalinks.com
+                  <a href="mailto:bdplinksapps@gmail.com" className="text-primary-600 hover:underline">
+                    bdplinksapps@gmail.com
                   </a>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Phone</h4>
-                  <a href="tel:+256700000000" className="text-primary-600 hover:underline">
-                    +256 700 000 000
-                  </a>
+                  <h4 className="font-semibold text-gray-900 mb-2">Location</h4>
+                  <p className="text-gray-600">Uganda</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Hours</h4>
-                  <p className="text-gray-600">Monday - Friday: 9 AM - 6 PM EAT</p>
+                  <p className="text-gray-600">Monday - Friday: 8 AM - 5 PM EAT</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Follow Us</h4>

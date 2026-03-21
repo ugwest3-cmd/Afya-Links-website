@@ -2,26 +2,26 @@ export default function HowItWorks() {
   const steps = [
     {
       num: '1',
-      title: 'Register & Verify',
-      description: 'Sign up with your business details. Our team verifies your documents (business license, registration). Takes 24-48 hours.',
-      users: 'All Partners'
+      title: 'Order',
+      description: 'Clinics place medicine orders through the Afya Links app by selecting pharmacies and products.',
+      users: 'Clinics'
     },
     {
       num: '2',
-      title: 'Set Up Your Profile',
-      description: 'Clinics: Set preferred supply areas. Pharmacies: Upload price lists. Drivers: Configure delivery preferences.',
-      users: 'Clinics, Pharmacies, Drivers'
+      title: 'Receive',
+      description: 'Wholesale pharmacies receive the order and confirm availability of medicines.',
+      users: 'Pharmacies'
     },
     {
       num: '3',
-      title: 'Start Transacting',
-      description: 'Clinics place orders, pharmacies respond with availability, drivers pick up and deliver.',
-      users: 'All Partners'
+      title: 'Pickup',
+      description: 'Drivers are assigned to collect medicines from the pharmacy and deliver to the clinic.',
+      users: 'Drivers'
     },
     {
       num: '4',
-      title: 'Track & Earn',
-      description: 'Real-time order tracking from creation to delivery. Pharmacies earn commissions. Invoices generated automatically.',
+      title: 'Confirm',
+      description: 'Clinic confirms receipt and the order is completed. Payments and settlements are processed.',
       users: 'All Partners'
     },
   ]

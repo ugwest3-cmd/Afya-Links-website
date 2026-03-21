@@ -14,7 +14,7 @@ export default function About() {
           <div className="max-w-3xl">
             <h1 className="heading-1 mb-6">About Afya Links</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              We&apos;re reimagining B2B medicine sourcing in Africa by connecting verified clinics, pharmacies, and drivers through a transparent, efficient, and trustworthy platform.
+              Afya Links enables clinics and drug shops to quickly order medicines from wholesale pharmacies and receive them through a coordinated delivery network. We digitize the medicine supply chain to solve inefficiencies.
             </p>
           </div>
         </div>
@@ -38,7 +38,29 @@ export default function About() {
             </div>
           </div>
 
-          {/* Values */}
+          {/* The Problem */}
+          <div className="mb-16">
+            <h2 className="heading-2 mb-8">The Problem</h2>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              Many clinics and drug shops experience frequent stock shortages because:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { icon: '📍', title: 'Distance', desc: 'Medicine suppliers are far away and difficult to reach' },
+                { icon: '⏱️', title: 'Slow Process', desc: 'Ordering takes too long and causes treatment delays' },
+                { icon: '🚗', title: 'Unreliable Delivery', desc: 'Deliveries are inconsistent and unpredictable' },
+                { icon: '📞', title: 'Poor Communication', desc: 'Communication between clinics and wholesalers is inefficient' }
+              ].map((item, idx) => (
+                <div key={idx} className="p-6 rounded-lg bg-gray-50 border border-gray-200">
+                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Our Values */}
           <div>
             <h2 className="heading-2 mb-8 text-center">Our Core Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

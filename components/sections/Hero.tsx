@@ -10,13 +10,12 @@ export default function Hero() {
           </div>
 
           <h1 className="heading-1 mb-6 text-gray-900">
-            Connect, Source & Deliver
-            <span className="gradient-text"> Medicines Efficiently</span>
+            A Digital Platform for
+            <span className="gradient-text"> Fast Medicine Supply</span>
           </h1>
 
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Afya Links is a controlled B2B platform connecting verified clinics, pharmacies, and drivers. 
-            Streamline your medicine sourcing, track deliveries in real-time, and grow your business with transparency.
+            Afya Links connects clinics to trusted wholesale pharmacies for fast medicine supply and reliable delivery. Place orders through our app, receive medicines within hours, and grow your healthcare business.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
