@@ -13,6 +13,7 @@ export default function Footer() {
       links: [
         { name: 'Features', href: '/features' },
         { name: 'Payments', href: '/payments' },
+        { name: 'Get Started', href: '/get-started' },
         { name: 'Security', href: '#' },
       ]
     },

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import { Download, CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Features - Afya Links',
@@ -71,18 +73,23 @@ export default function Features() {
                   </li>
                 ))}
               </ul>
-              <a 
-                href="/downloads/clinic.apk" 
-                download
+              <Link 
+                href="/get-started" 
                 className="btn-apple-primary inline-flex items-center gap-3 !px-8 !py-4 shadow-xl shadow-blue-500/20"
               >
-                <Download className="w-5 h-5" />
-                Download Clinic App (APK)
-              </a>
+                Get Started with Clinic App
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
-            <div className="bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl h-[500px] shadow-inner relative overflow-hidden group">
-               <div className="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                 <p className="font-semibold text-primary-900">App Interface Preview</p>
+            <div className="relative rounded-2xl h-[600px] shadow-2xl border-8 border-gray-900 overflow-hidden group">
+               <Image 
+                 src="/assets/clinic-preview.jpg" 
+                 alt="Clinic App Preview" 
+                 fill
+                 className="object-cover"
+               />
+               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                 <p className="text-white font-bold text-xl uppercase tracking-widest">Clinic Interface</p>
                </div>
             </div>
           </div>
@@ -93,9 +100,15 @@ export default function Features() {
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-accent-100 to-primary-100 rounded-2xl h-[500px] shadow-inner order-2 lg:order-1 relative overflow-hidden group">
-               <div className="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                 <p className="font-semibold text-accent-900">Inventory Management Preview</p>
+            <div className="relative rounded-2xl h-[600px] shadow-2xl border-8 border-gray-900 overflow-hidden group order-2 lg:order-1">
+               <Image 
+                 src="/assets/pharmacy-preview.jpg" 
+                 alt="Pharmacy App Preview" 
+                 fill
+                 className="object-cover"
+               />
+               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                 <p className="text-white font-bold text-xl uppercase tracking-widest">Pharmacy Interface</p>
                </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -113,14 +126,13 @@ export default function Features() {
                   </li>
                 ))}
               </ul>
-              <a 
-                href="/downloads/pharmacy.apk" 
-                download
+              <Link 
+                href="/get-started" 
                 className="btn-apple-primary !bg-accent-600 hover:!bg-accent-700 inline-flex items-center gap-3 !px-8 !py-4 shadow-xl shadow-accent-500/20"
               >
-                <Download className="w-5 h-5" />
-                Download Pharmacy App (APK)
-              </a>
+                Get Started with Pharmacy App
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </div>
@@ -145,14 +157,13 @@ export default function Features() {
                   </li>
                 ))}
               </ul>
-              <a 
-                href="/downloads/delivery.apk" 
-                download
+              <Link 
+                href="/get-started" 
                 className="btn-apple-primary !bg-gray-900 hover:!bg-black inline-flex items-center gap-3 !px-8 !py-4 shadow-xl shadow-gray-500/20"
               >
-                <Download className="w-5 h-5" />
-                Download Driver App (APK)
-              </a>
+                Get Started with Driver App
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
             <div className="bg-gradient-to-br from-success-100 to-primary-100 rounded-2xl h-[500px] shadow-inner relative overflow-hidden group">
                <div className="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
