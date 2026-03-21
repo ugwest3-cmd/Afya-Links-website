@@ -12,8 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-bold text-white mb-4 flex items-center gap-2">
-              <Image src="/assets/logo.png" alt="Afya Links" width={24} height={24} className="w-6 h-6" />
+            <h3 className="font-bold text-white mb-4 flex items-center gap-3">
+              <Image src="/assets/logo.png" alt="Afya Links" width={36} height={36} className="w-9 h-9" />
               Afya Links
             </h3>
             <p className="text-sm text-gray-400">

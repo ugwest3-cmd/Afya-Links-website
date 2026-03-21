@@ -7,36 +7,36 @@ export const metadata: Metadata = {
 
 export default function Features() {
   const clinicFeatures = [
-    'Search medicines from verified pharmacies',
-    'Compare real-time prices',
-    'Place orders with prescriptions',
-    'Track delivery in real-time',
-    'Push notifications at each order stage',
-    'Order history and invoicing',
-    'Preferred pharmacy selection',
-    'Delivery code verification'
+    { title: 'Prevent Stock-Outs', desc: 'Restock medicines quickly when supplies run low' },
+    { title: 'Save Time', desc: 'No need to travel to suppliers to place orders' },
+    { title: 'Faster Deliveries', desc: 'Drivers deliver medicines directly to your clinic' },
+    { title: 'Order Tracking', desc: 'View your dashboard and track orders in real-time' },
+    { title: 'Browse & Order', desc: 'Select from multiple verified pharmacies and place orders' },
+    { title: 'Secure Payments', desc: 'Pay for orders and confirm deliveries safely' },
+    { title: 'Real-time Notifications', desc: 'Get updates at each stage of your order' },
+    { title: 'Order History', desc: 'Access all invoices and receipts in one place' }
   ]
 
   const pharmacyFeatures = [
-    'Upload periodic price lists',
-    'Auto-expiring pricing (48-hour TTL)',
-    'Accept or reject orders',
-    'Partial acceptance options',
-    'Order code generation & tracking',
-    'Auto-generated invoices',
-    'Payout request management',
-    'Commission transparency'
+    { title: 'More Customers', desc: 'Access clinics and drug shops across different areas' },
+    { title: 'Digital Orders', desc: 'Receive clear, organized orders directly through app' },
+    { title: 'Organized Deliveries', desc: 'Drivers collect and deliver medicines to clinics' },
+    { title: 'Increased Sales', desc: 'Grow daily order volume without adding sales staff' },
+    { title: 'Order Notifications', desc: 'Get instant alerts when new orders arrive' },
+    { title: 'Earnings Dashboard', desc: 'View and track your earnings and payouts' },
+    { title: 'Upload Price Lists', desc: 'Manage and update your product pricing easily' },
+    { title: 'Digital Invoices', desc: 'Auto-generated invoices for all transactions' }
   ]
 
   const driverFeatures = [
-    'Receive verified delivery assignments',
-    'Real-time order details',
-    'Delivery route optimization',
-    'Safety: order code verification',
-    'Earnings tracking',
-    'Performance ratings',
-    'Flexible scheduling',
-    'Direct support channel'
+    { title: 'Receive Requests', desc: 'Get delivery requests from verified orders' },
+    { title: 'Earn Delivery Fees', desc: 'Fair payment for each delivery completed' },
+    { title: 'Flexible Opportunities', desc: 'Choose when and which deliveries to accept' },
+    { title: 'Clear Instructions', desc: 'Know exactly where to pick up and drop off' },
+    { title: 'Track Earnings', desc: 'View all payments and earnings in one place' },
+    { title: 'Performance Ratings', desc: 'Build reputation through reliable deliveries' },
+    { title: 'Safety Verification', desc: 'All orders come with verification codes' },
+    { title: 'Direct Support', desc: 'Get help when you need it with dedicated support' }
   ]
 
   return (

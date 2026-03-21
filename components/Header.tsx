@@ -11,9 +11,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <nav className="container-custom flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/assets/logo.png" alt="Afya Links" width={40} height={40} className="w-10 h-10" />
-          <span className="hidden sm:inline font-bold text-lg text-gray-900 leading-none">Afya Links</span>
+        <Link href="/" className="flex items-center gap-3">
+          <Image src="/assets/logo.png" alt="Afya Links" width={56} height={56} className="w-14 h-14" />
+          <span className="hidden sm:inline font-bold text-xl text-gray-900 leading-none">Afya Links</span>
         </Link>
 
         {/* Desktop Navigation */}
