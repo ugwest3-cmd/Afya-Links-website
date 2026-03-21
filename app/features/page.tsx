@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Download, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Features - Afya Links',
@@ -56,22 +57,34 @@ export default function Features() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-2 mb-6">🏥 For Clinics</h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <h2 className="heading-2 mb-6 text-gray-900 border-l-4 border-primary-600 pl-6">For Clinics</h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Sourcing medicines has never been easier. Compare prices, track orders, and ensure you never run out of stock.
               </p>
-              <ul className="space-y-3">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                 {clinicFeatures.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <span className="w-6 h-6 rounded-full bg-success-100 text-success-700 flex items-center justify-center text-sm">✓</span>
-                    <span className="text-gray-700">
-                      <strong>{feature.title}:</strong> {feature.desc}
+                  <li key={idx} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+                    <CheckCircle2 className="w-5 h-5 text-success-500 mt-0.5 shrink-0" />
+                    <span className="text-sm text-gray-700 font-medium">
+                      {feature.title}
                     </span>
                   </li>
                 ))}
               </ul>
+              <a 
+                href="/downloads/clinic.apk" 
+                download
+                className="btn-apple-primary inline-flex items-center gap-3 !px-8 !py-4 shadow-xl shadow-blue-500/20"
+              >
+                <Download className="w-5 h-5" />
+                Download Clinic App (APK)
+              </a>
             </div>
-            <div className="bg-gradient-to-br from-primary-100 to-accent-100 rounded-xl p-8 h-96"></div>
+            <div className="bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl h-[500px] shadow-inner relative overflow-hidden group">
+               <div className="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                 <p className="font-semibold text-primary-900">App Interface Preview</p>
+               </div>
+            </div>
           </div>
         </div>
       </section>
@@ -80,22 +93,34 @@ export default function Features() {
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-accent-100 to-primary-100 rounded-xl p-8 h-96 order-2 lg:order-1"></div>
+            <div className="bg-gradient-to-br from-accent-100 to-primary-100 rounded-2xl h-[500px] shadow-inner order-2 lg:order-1 relative overflow-hidden group">
+               <div className="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                 <p className="font-semibold text-accent-900">Inventory Management Preview</p>
+               </div>
+            </div>
             <div className="order-1 lg:order-2">
-              <h2 className="heading-2 mb-6">💊 For Pharmacies</h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <h2 className="heading-2 mb-6 text-gray-900 border-l-4 border-accent-600 pl-6">For Pharmacies</h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Control your prices, manage supply efficiently, and earn recurring revenue from clinic orders without inventory risk.
               </p>
-              <ul className="space-y-3">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                 {pharmacyFeatures.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <span className="w-6 h-6 rounded-full bg-success-100 text-success-700 flex items-center justify-center text-sm">✓</span>
-                    <span className="text-gray-700">
-                      <strong>{feature.title}:</strong> {feature.desc}
+                  <li key={idx} className="flex items-start gap-3 p-4 rounded-xl bg-white border border-gray-100">
+                    <CheckCircle2 className="w-5 h-5 text-accent-500 mt-0.5 shrink-0" />
+                    <span className="text-sm text-gray-700 font-medium">
+                      {feature.title}
                     </span>
                   </li>
                 ))}
               </ul>
+              <a 
+                href="/downloads/pharmacy.apk" 
+                download
+                className="btn-apple-primary !bg-accent-600 hover:!bg-accent-700 inline-flex items-center gap-3 !px-8 !py-4 shadow-xl shadow-accent-500/20"
+              >
+                <Download className="w-5 h-5" />
+                Download Pharmacy App (APK)
+              </a>
             </div>
           </div>
         </div>
@@ -106,22 +131,34 @@ export default function Features() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-2 mb-6">🚚 For Drivers</h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <h2 className="heading-2 mb-6 text-gray-900 border-l-4 border-success-600 pl-6">For Drivers</h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Earn fair income with reliable deliveries. Verified orders, transparent payments, and safe routes.
               </p>
-              <ul className="space-y-3">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                 {driverFeatures.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <span className="w-6 h-6 rounded-full bg-success-100 text-success-700 flex items-center justify-center text-sm">✓</span>
-                    <span className="text-gray-700">
-                      <strong>{feature.title}:</strong> {feature.desc}
+                  <li key={idx} className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+                    <CheckCircle2 className="w-5 h-5 text-success-500 mt-0.5 shrink-0" />
+                    <span className="text-sm text-gray-700 font-medium">
+                      {feature.title}
                     </span>
                   </li>
                 ))}
               </ul>
+              <a 
+                href="/downloads/delivery.apk" 
+                download
+                className="btn-apple-primary !bg-gray-900 hover:!bg-black inline-flex items-center gap-3 !px-8 !py-4 shadow-xl shadow-gray-500/20"
+              >
+                <Download className="w-5 h-5" />
+                Download Driver App (APK)
+              </a>
             </div>
-            <div className="bg-gradient-to-br from-success-100 to-primary-100 rounded-xl p-8 h-96"></div>
+            <div className="bg-gradient-to-br from-success-100 to-primary-100 rounded-2xl h-[500px] shadow-inner relative overflow-hidden group">
+               <div className="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                 <p className="font-semibold text-success-900">Driver App Preview</p>
+               </div>
+            </div>
           </div>
         </div>
       </section>

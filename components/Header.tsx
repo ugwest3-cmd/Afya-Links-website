@@ -48,9 +48,6 @@ export default function Header() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-6">
-          <Link href="/register" className="text-sm font-semibold text-[#1D1D1F] hover:text-[#0071E3] transition-colors">
-            Sign In
-          </Link>
           <Link href="/register" className="btn-apple-primary !py-2.5 !px-6 !text-sm flex items-center gap-2 group shadow-lg shadow-blue-500/10">
             Get Started
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -87,9 +84,6 @@ export default function Header() {
               </div>
             ))}
             <div className="pt-6 border-t border-gray-100 flex flex-col gap-4">
-              <Link href="/register" className="btn-apple-secondary text-center" onClick={() => setIsOpen(false)}>
-                Sign In
-              </Link>
               <Link href="/register" className="btn-apple-primary text-center" onClick={() => setIsOpen(false)}>
                 Join Now
               </Link>

@@ -14,7 +14,6 @@ export default function Footer() {
         { name: 'Features', href: '/features' },
         { name: 'Payments', href: '/payments' },
         { name: 'Security', href: '#' },
-        { name: 'API Docs', href: '#' },
       ]
     },
     {
