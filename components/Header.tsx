@@ -18,7 +18,7 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/about" className="text-gray-600 hover:text-gray-900 transition">About</Link>
+          <Link href="/about-us" className="text-gray-600 hover:text-gray-900 transition">About</Link>
           <Link href="/features" className="text-gray-600 hover:text-gray-900 transition">Features</Link>
           <Link href="/pricing" className="text-gray-600 hover:text-gray-900 transition">Pricing</Link>
           <Link href="/blog" className="text-gray-600 hover:text-gray-900 transition">Blog</Link>
@@ -50,7 +50,7 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden border-t border-gray-200 bg-gray-50">
           <div className="container-custom py-4 space-y-3">
-            <Link href="/about" className="block text-gray-600 hover:text-gray-900">About</Link>
+            <Link href="/about-us" className="block text-gray-600 hover:text-gray-900">About</Link>
             <Link href="/features" className="block text-gray-600 hover:text-gray-900">Features</Link>
             <Link href="/pricing" className="block text-gray-600 hover:text-gray-900">Pricing</Link>
             <Link href="/blog" className="block text-gray-600 hover:text-gray-900">Blog</Link>
