@@ -1,5 +1,7 @@
 'use client'
 
+// AfyaLinks Premium Hero - Redesigned with Framer Motion
+
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
