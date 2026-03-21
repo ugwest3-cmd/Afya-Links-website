@@ -44,6 +44,16 @@ const config: Config = {
           800: '#166534',
           900: '#145231',
         },
+        apple: {
+          blue: '#0071E3',
+          gray: '#F5F5F7',
+        },
+      },
+      borderRadius: {
+        'apple': '28px',
+      },
+      backdropBlur: {
+        'apple': '20px',
       },
       typography: {
         DEFAULT: {

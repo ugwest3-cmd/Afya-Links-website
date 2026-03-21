@@ -1,48 +1,68 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-gray-50 via-white to-blue-50 section-padding">
-      <div className="container-custom">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-6">
-            🚀 Simplifying B2B Medicine Sourcing
-          </div>
+    <section className="relative overflow-hidden bg-[#F5F5F7] section-padding min-h-[90vh] flex items-center">
+      <div className="container-custom relative z-10">
+        <div className="max-w-[900px] mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <span className="inline-block px-4 py-1.5 mb-8 text-sm font-medium tracking-wide text-[#86868B] uppercase bg-white/50 backdrop-blur-md rounded-full border border-gray-200/50">
+              Healthcare, reimagined
+            </span>
+          </motion.div>
 
-          <h1 className="heading-1 mb-6 text-gray-900">
-            A Digital Platform for
-            <span className="gradient-text"> Fast Medicine Supply</span>
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="heading-1 mb-10 text-[#1D1D1F]"
+          >
+            Digital logistics <br className="hidden md:block" />
+            <span className="text-[#0071E3]">for medicine supply.</span>
+          </h1 >
 
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Afya Links connects clinics to trusted wholesale pharmacies for fast medicine supply and reliable delivery. Place orders through our app, receive medicines within hours, and grow your healthcare business.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-xl md:text-2xl text-[#86868B] mb-12 max-w-[700px] mx-auto leading-relaxed font-medium"
+          >
+            Afya Links connects clinics to trusted wholesale pharmacies for fast, reliable, and verified medicine delivery across the region.
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link href="/register" className="btn-primary inline-block">
-              Get Started Free
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          >
+            <Link href="/register" className="btn-apple-primary flex items-center gap-2 group shadow-xl shadow-blue-500/20">
+              Start Sourcing
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <a href="#learn-more" className="btn-secondary inline-block">
-              Learn How It Works
-            </a>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200">
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-primary-600">10K+</p>
-              <p className="text-sm text-gray-600">Active Orders</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-accent-600">500+</p>
-              <p className="text-sm text-gray-600">Partners</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-bold text-success-600">99%</p>
-              <p className="text-sm text-gray-600">Delivery Rate</p>
-            </div>
-          </div>
+            <Link href="/about-us" className="text-[#0071E3] font-semibold text-lg hover:underline underline-offset-4 decoration-2">
+              Learn how it works →
+            </Link>
+          </motion.div>
         </div>
+      </div>
+      
+      {/* Background Decor */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-100/50 blur-[120px] rounded-full opacity-60" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-100/30 blur-[120px] rounded-full opacity-60" />
       </div>
     </section>
   )

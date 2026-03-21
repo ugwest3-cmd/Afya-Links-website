@@ -2,66 +2,94 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { Twitter, Linkedin, Facebook, ArrowUpRight } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const footerLinks = [
+    {
+      title: 'Product',
+      links: [
+        { name: 'Features', href: '/features' },
+        { name: 'Pricing', href: '/pricing' },
+        { name: 'Security', href: '#' },
+        { name: 'API Docs', href: '#' },
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about-us' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Careers', href: '#' },
+      ]
+    },
+    {
+      title: 'Legal',
+      links: [
+        { name: 'Privacy Policy', href: '/legal' },
+        { name: 'Terms of Service', href: '/legal' },
+        { name: 'Cookie Policy', href: '/legal' },
+      ]
+    }
+  ]
+
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
-          <div>
-            <h3 className="font-bold text-white mb-4 flex items-center gap-3">
-              <Image src="/assets/logo.png" alt="Afya Links" width={36} height={36} className="w-9 h-9" />
-              Afya Links
-            </h3>
-            <p className="text-sm text-gray-400">
-              Connecting clinics, pharmacies, and drivers for efficient medicine sourcing and delivery.
+    <footer className="bg-[#F5F5F7] border-t border-gray-200/50 pt-20 pb-10">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
+          <div className="lg:col-span-2">
+            <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
+              <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center transition-transform group-hover:scale-105">
+                <Image src="/assets/logo.png" alt="Afya Links" width={32} height={32} className="w-8 h-8 object-contain" />
+              </div>
+              <span className="font-bold text-xl text-[#1D1D1F] tracking-tight">Afya Links</span>
+            </Link>
+            <p className="text-[#86868B] text-lg max-w-sm mb-8 font-medium leading-relaxed">
+              Redefining pharmaceutical distribution with precision, speed, and digital trust.
             </p>
+            <div className="flex gap-4">
+              {[Twitter, Linkedin, Facebook].map((Icon, idx) => (
+                <a 
+                  key={idx} 
+                  href="#" 
+                  className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#86868B] hover:text-[#0071E3] hover:border-[#0071E3] transition-all"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">Product</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/features" className="text-gray-400 hover:text-white transition">Features</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-white transition">Pricing</Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Security</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">API Docs</a></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">Company</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/about-us" className="text-gray-400 hover:text-white transition">About</Link></li>
-              <li><Link href="/blog" className="text-gray-400 hover:text-white transition">Blog</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Careers</a></li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/legal" className="text-gray-400 hover:text-white transition">Privacy</Link></li>
-              <li><Link href="/legal" className="text-gray-400 hover:text-white transition">Terms</Link></li>
-              <li><Link href="/legal" className="text-gray-400 hover:text-white transition">Cookies</Link></li>
-            </ul>
-          </div>
+          {footerLinks.map((column) => (
+            <div key={column.title}>
+              <h4 className="text-xs font-bold text-[#1D1D1F] uppercase tracking-widest mb-6">{column.title}</h4>
+              <ul className="space-y-4">
+                {column.links.map((link) => (
+                  <li key={link.name}>
+                    <Link 
+                      href={link.href} 
+                      className="text-[#86868B] hover:text-[#0071E3] transition-colors text-sm font-medium flex items-center gap-1 group"
+                    >
+                      {link.name}
+                      {link.href === '#' && <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400">
-            © {currentYear} Afya Links Digital Healthcare Logistics Platform. All rights reserved.
+        <div className="pt-10 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs font-medium text-[#86868B]">
+            © {currentYear} Afya Links Digital Healthcare. Designed with precision in Uganda.
           </p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white transition">Twitter</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">LinkedIn</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">Facebook</a>
+          <div className="flex gap-8">
+            <a href="#" className="text-xs font-medium text-[#86868B] hover:text-[#1D1D1F] transition-colors">Accessibility</a>
+            <a href="#" className="text-xs font-medium text-[#86868B] hover:text-[#1D1D1F] transition-colors">System Status</a>
           </div>
         </div>
       </div>

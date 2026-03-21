@@ -2,62 +2,99 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <nav className="container-custom flex items-center justify-between h-16 md:h-20">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-white/80 backdrop-blur-apple border-b border-gray-200/50 py-3' : 'bg-transparent py-5'
+    }`}>
+      <nav className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <Image src="/assets/logo.png" alt="Afya Links" width={56} height={56} className="w-14 h-14" />
-          <span className="hidden sm:inline font-bold text-xl text-gray-900 leading-none">Afya Links</span>
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center transition-transform group-hover:scale-105">
+            <Image src="/assets/logo.png" alt="Afya Links" width={32} height={32} className="w-8 h-8 object-contain" />
+          </div>
+          <span className="hidden sm:inline font-bold text-xl text-[#1D1D1F] tracking-tight">Afya Links</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          <Link href="/about-us" className="text-gray-600 hover:text-gray-900 transition">About</Link>
-          <Link href="/features" className="text-gray-600 hover:text-gray-900 transition">Features</Link>
-          <Link href="/pricing" className="text-gray-600 hover:text-gray-900 transition">Pricing</Link>
-          <Link href="/blog" className="text-gray-600 hover:text-gray-900 transition">Blog</Link>
-          <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition">Contact</Link>
+        <div className="hidden md:flex items-center gap-10">
+          {[
+            { name: 'About', href: '/about-us' },
+            { name: 'Features', href: '/features' },
+            { name: 'Pricing', href: '/pricing' },
+            { name: 'Blog', href: '/blog' },
+            { name: 'Contact', href: '/contact' }
+          ].map((item) => (
+            <Link 
+              key={item.name} 
+              href={item.href}
+              className="text-sm font-medium text-[#86868B] hover:text-[#1D1D1F] transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
 
         {/* CTA Buttons */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link href="/register" className="btn-secondary text-sm">
-            Register Now
+        <div className="hidden md:flex items-center gap-6">
+          <Link href="/register" className="text-sm font-semibold text-[#1D1D1F] hover:text-[#0071E3] transition-colors">
+            Sign In
           </Link>
-          <a href="#download" className="btn-primary text-sm">
-            Download App
-          </a>
+          <Link href="/register" className="btn-apple-primary !py-2.5 !px-6 !text-sm flex items-center gap-2 group shadow-lg shadow-blue-500/10">
+            Get Started
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 hover:bg-gray-100 rounded-lg"
+          className="md:hidden p-2 text-[#1D1D1F] hover:bg-gray-100 rounded-full transition-colors"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-gray-50">
-          <div className="container-custom py-4 space-y-3">
-            <Link href="/about-us" className="block text-gray-600 hover:text-gray-900">About</Link>
-            <Link href="/features" className="block text-gray-600 hover:text-gray-900">Features</Link>
-            <Link href="/pricing" className="block text-gray-600 hover:text-gray-900">Pricing</Link>
-            <Link href="/blog" className="block text-gray-600 hover:text-gray-900">Blog</Link>
-            <Link href="/contact" className="block text-gray-600 hover:text-gray-900">Contact</Link>
-            <div className="flex flex-col gap-2 pt-2">
-              <Link href="/register" className="btn-secondary text-center">Register</Link>
-              <a href="#download" className="btn-primary text-center">Download App</a>
+        <div className="md:hidden fixed inset-0 top-[72px] bg-white z-40 p-6 animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="flex flex-col gap-6">
+            {[
+              { name: 'About', href: '/about-us' },
+              { name: 'Features', href: '/features' },
+              { name: 'Pricing', href: '/pricing' },
+              { name: 'Blog', href: '/blog' },
+              { name: 'Contact', href: '/contact' }
+            ].map((item) => (
+              <div key={item.name} className="py-2">
+                <Link 
+                  href={item.href}
+                  className="text-2xl font-semibold text-[#1D1D1F]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </div>
+            ))}
+            <div className="pt-6 border-t border-gray-100 flex flex-col gap-4">
+              <Link href="/register" className="btn-apple-secondary text-center" onClick={() => setIsOpen(false)}>
+                Sign In
+              </Link>
+              <Link href="/register" className="btn-apple-primary text-center" onClick={() => setIsOpen(false)}>
+                Join Now
+              </Link>
             </div>
           </div>
         </div>
