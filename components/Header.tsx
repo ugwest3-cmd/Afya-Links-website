@@ -33,7 +33,6 @@ export default function Header() {
           {[
             { name: 'About', href: '/about-us' },
             { name: 'Features', href: '/features' },
-            { name: 'Pricing', href: '/pricing' },
             { name: 'Blog', href: '/blog' },
             { name: 'Contact', href: '/contact' }
           ].map((item) => (
@@ -74,7 +73,6 @@ export default function Header() {
             {[
               { name: 'About', href: '/about-us' },
               { name: 'Features', href: '/features' },
-              { name: 'Pricing', href: '/pricing' },
               { name: 'Blog', href: '/blog' },
               { name: 'Contact', href: '/contact' }
             ].map((item) => (

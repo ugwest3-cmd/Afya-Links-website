@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { ShieldCheck, Zap, BarChart3, Mail, Phone, MapPin } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Afya Links - B2B Medicine Sourcing Platform',
@@ -53,12 +54,16 @@ export default function AboutUs() {
             <h2 className="heading-2 mb-12 text-center">Our Core Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { emoji: '🤝', title: 'Trust', desc: 'Verification, compliance, and transparency in every transaction.' },
-                { emoji: '⚡', title: 'Efficiency', desc: 'Fast order processing, real-time tracking, and quick settlements.' },
-                { emoji: '📈', title: 'Impact', desc: 'Enabling sustainable growth for all partners in the ecosystem.' }
+                { icon: ShieldCheck, title: 'Trust', desc: 'Verification, compliance, and transparency in every transaction.' },
+                { icon: Zap, title: 'Efficiency', desc: 'Fast order processing, real-time tracking, and quick settlements.' },
+                { icon: BarChart3, title: 'Impact', desc: 'Enabling sustainable growth for all partners in the ecosystem.' }
               ].map((val, idx) => (
-                <div key={idx} className="p-8 rounded-xl bg-gray-50 border border-gray-100 text-center hover:shadow-md transition">
-                  <div className="text-5xl mb-6">{val.emoji}</div>
+                <div key={idx} className="p-8 rounded-xl bg-gray-50 border border-gray-100 text-center hover:shadow-md transition group">
+                  <div className="flex justify-center mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-white shadow-sm border border-gray-100 flex items-center justify-center transition-transform group-hover:scale-110">
+                      <val.icon className="w-8 h-8 text-primary-600" />
+                    </div>
+                  </div>
                   <h3 className="heading-3 mb-4">{val.title}</h3>
                   <p className="text-gray-600">{val.desc}</p>
                 </div>
@@ -87,8 +92,8 @@ export default function AboutUs() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">Flutterwave</h3>
-                <p>We leverage Flutterwave for secure online payment processing, ensuring that transactions between healthcare providers are smooth and protected.</p>
+                <h3 className="text-xl font-bold text-white mb-2">Pesapal</h3>
+                <p>We leverage Pesapal for secure online payment processing, ensuring that transactions between healthcare providers are smooth, protected, and localized for East Africa.</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
@@ -144,19 +149,31 @@ export default function AboutUs() {
         <div className="container-custom">
           <h2 className="heading-2 mb-12 text-center">Contact Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 text-center">
-              <div className="text-3xl mb-4">📧</div>
+            <div className="p-6 text-center group">
+              <div className="flex justify-center mb-4">
+                 <div className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center transition-transform group-hover:scale-110 shadow-sm">
+                   <Mail className="w-6 h-6 text-primary-600" />
+                 </div>
+              </div>
               <h3 className="font-bold mb-2">Email</h3>
               <p className="text-gray-600">bdplinksapps@gmail.com</p>
               <p className="text-gray-600">tunanukireallan256@gmail.com</p>
             </div>
-            <div className="p-6 text-center">
-              <div className="text-3xl mb-4">📞</div>
+            <div className="p-6 text-center group">
+              <div className="flex justify-center mb-4">
+                 <div className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center transition-transform group-hover:scale-110 shadow-sm">
+                   <Phone className="w-6 h-6 text-primary-600" />
+                 </div>
+              </div>
               <h3 className="font-bold mb-2">Phone</h3>
               <p className="text-gray-600">+256 760 680 980</p>
             </div>
-            <div className="p-6 text-center">
-              <div className="text-3xl mb-4">📍</div>
+            <div className="p-6 text-center group">
+              <div className="flex justify-center mb-4">
+                 <div className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center transition-transform group-hover:scale-110 shadow-sm">
+                   <MapPin className="w-6 h-6 text-primary-600" />
+                 </div>
+              </div>
               <h3 className="font-bold mb-2">Location</h3>
               <p className="text-gray-600">Uganda, Mbarara</p>
             </div>

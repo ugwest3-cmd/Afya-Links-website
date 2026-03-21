@@ -12,7 +12,7 @@ export default function Footer() {
       title: 'Product',
       links: [
         { name: 'Features', href: '/features' },
-        { name: 'Pricing', href: '/pricing' },
+        { name: 'Payments', href: '/payments' },
         { name: 'Security', href: '#' },
         { name: 'API Docs', href: '#' },
       ]
@@ -23,7 +23,7 @@ export default function Footer() {
         { name: 'About Us', href: '/about-us' },
         { name: 'Blog', href: '/blog' },
         { name: 'Contact', href: '/contact' },
-        { name: 'Careers', href: '#' },
+        { name: 'Careers', href: '/careers' },
       ]
     },
     {
