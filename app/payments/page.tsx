@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Stethoscope, Pill, Truck, CreditCard, Wallet, Banknote, ArrowDownCircle, CheckCircle2 } from 'lucide-react'
+import { Stethoscope, Pill, Truck, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Payments - Afya Links',
