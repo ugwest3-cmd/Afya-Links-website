@@ -32,7 +32,7 @@ export default function HowItWorks() {
         <div className="text-center mb-16">
           <h2 className="heading-2 mb-4">How It Works</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Simple steps to join Africa's leading B2B medicine sourcing platform.
+            Simple steps to join Africa&apos;s leading B2B medicine sourcing platform.
           </p>
         </div>
 

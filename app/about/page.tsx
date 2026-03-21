@@ -14,7 +14,7 @@ export default function About() {
           <div className="max-w-3xl">
             <h1 className="heading-1 mb-6">About Afya Links</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              We're reimagining B2B medicine sourcing in Africa by connecting verified clinics, pharmacies, and drivers through a transparent, efficient, and trustworthy platform.
+              We&apos;re reimagining B2B medicine sourcing in Africa by connecting verified clinics, pharmacies, and drivers through a transparent, efficient, and trustworthy platform.
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function About() {
               <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
               <div>
                 <h3 className="heading-3 mb-2">No Inventory Holding</h3>
-                <p className="text-gray-600">We don't hold stock. We connect buyers and sellers directly, acting as a transaction orchestrator.</p>
+                <p className="text-gray-600">We don&apos;t hold stock. We connect buyers and sellers directly, acting as a transaction orchestrator.</p>
               </div>
             </div>
             <div className="flex gap-6">

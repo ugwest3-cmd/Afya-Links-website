@@ -51,7 +51,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     <>
       {submitSuccess && (
         <div className="mb-6 p-4 bg-success-50 border border-success-200 text-success-800 rounded-lg">
-          Thank you! We'll get back to you soon.
+          Thank you! We&apos;ll get back to you soon.
         </div>
       )}
 
@@ -95,7 +95,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
               value={formData.phone}
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
-              placeholder="+256..."
+              placeholder={`+256...`}
             />
           </div>
           <div>
