@@ -3,8 +3,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import { MapPin, Clock, ArrowLeft, Send, CheckCircle2, ChevronRight } from 'lucide-react'
 
 interface Career {
@@ -44,37 +42,27 @@ export default function CareerDetailPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white">
-        <Header />
-        <div className="flex flex-col items-center justify-center py-40 gap-4">
-          <div className="w-10 h-10 border-4 border-[#0071E3] border-t-transparent rounded-full animate-spin"></div>
-        </div>
+      <div className="flex flex-col items-center justify-center py-40 gap-4 min-h-screen">
+        <div className="w-10 h-10 border-4 border-[#0071E3] border-t-transparent rounded-full animate-spin"></div>
       </div>
     )
   }
 
   if (!career) {
     return (
-      <div className="min-h-screen bg-white text-[#1D1D1F]">
-        <Header />
-        <div className="container-custom pt-40 pb-20 text-center">
-          <h1 className="text-4xl font-bold mb-6">Position not found</h1>
-          <p className="text-[#86868B] mb-8">The job listing you&apos;re looking for might have been closed or removed.</p>
-          <button onClick={() => router.back()} className="btn-apple-primary">
-            Go Back
-          </button>
-        </div>
-        <Footer />
+      <div className="container-custom pt-40 pb-20 text-center min-h-screen">
+        <h1 className="text-4xl font-bold mb-6">Position not found</h1>
+        <p className="text-[#86868B] mb-8">The job listing you&apos;re looking for might have been closed or removed.</p>
+        <button onClick={() => router.back()} className="btn-apple-primary">
+          Go Back
+        </button>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-white text-[#1D1D1F]">
-      <Header />
-
-      <main className="pt-32 pb-24">
-        <div className="container-custom">
+    <main className="pt-32 pb-24 bg-white text-[#1D1D1F]">
+      <div className="container-custom">
           {/* Breadcrumbs */}
           <div className="flex items-center gap-2 mb-12 animate-fade-in">
             <Link href="/careers" className="text-sm font-medium text-[#86868B] hover:text-[#0071E3] transition-colors">Careers</Link>
@@ -154,10 +142,7 @@ export default function CareerDetailPage() {
             </div>
           </div>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+    </main>
   )
 }
 

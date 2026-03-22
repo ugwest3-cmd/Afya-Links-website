@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import { MapPin, ArrowRight, Briefcase, Users, Zap, Globe } from 'lucide-react'
 
 interface Career {
@@ -40,11 +38,8 @@ export default function CareersPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white text-[#1D1D1F]">
-      <Header />
-
-      <main>
-        {/* Hero Section */}
+    <main className="bg-white text-[#1D1D1F]">
+      {/* Hero Section */}
         <section className="pt-32 pb-20 bg-[#F5F5F7]">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
@@ -139,9 +134,6 @@ export default function CareersPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
-    </div>
   )
 }
 
