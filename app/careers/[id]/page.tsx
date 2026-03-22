@@ -59,7 +59,7 @@ export default function CareerDetailPage() {
         <Header />
         <div className="container-custom pt-40 pb-20 text-center">
           <h1 className="text-4xl font-bold mb-6">Position not found</h1>
-          <p className="text-[#86868B] mb-8">The job listing you're looking for might have been closed or removed.</p>
+          <p className="text-[#86868B] mb-8">The job listing you&apos;re looking for might have been closed or removed.</p>
           <button onClick={() => router.back()} className="btn-apple-primary">
             Go Back
           </button>
@@ -129,7 +129,7 @@ export default function CareerDetailPage() {
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#0071E3]/20 blur-[60px] rounded-full group-hover:bg-[#0071E3]/40 transition-colors duration-500"></div>
                   
                   <h3 className="text-2xl font-bold mb-4 relative z-10">Interested?</h3>
-                  <p className="text-gray-400 font-medium mb-10 relative z-10">We'd love to hear from you. Applications are reviewed on a rolling basis.</p>
+                  <p className="text-gray-400 font-medium mb-10 relative z-10">We&apos;d love to hear from you. Applications are reviewed on a rolling basis.</p>
                   
                   <a 
                     href={`mailto:careers@afyalinks.com?subject=Application for ${career.title}`}
@@ -147,7 +147,7 @@ export default function CareerDetailPage() {
                 <div className="bg-[#F5F5F7] rounded-[2rem] p-8 border border-gray-100">
                   <h4 className="text-sm font-bold uppercase tracking-widest text-[#86868B] mb-6">Next Steps</h4>
                   <p className="text-[#424245] font-medium text-sm leading-relaxed">
-                    Once you apply, our recruitment team will review your application. If there's a match, we'll reach out for a 30-minute introductory call.
+                    Once you apply, our recruitment team will review your application. If there&apos;s a match, we&apos;ll reach out for a 30-minute introductory call.
                   </p>
                 </div>
               </div>

@@ -1,11 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { MapPin, Clock, ArrowRight, Briefcase, Users, Zap, Globe } from 'lucide-react'
+import { MapPin, ArrowRight, Briefcase, Users, Zap, Globe } from 'lucide-react'
 
 interface Career {
   id: string
@@ -51,7 +50,7 @@ export default function CareersPage() {
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 mb-8 animate-fade-in shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-[#0071E3] animate-pulse"></span>
-                <span className="text-xs font-bold uppercase tracking-widest text-[#1D1D1F]">We're Hiring</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#1D1D1F]">We&apos;re Hiring</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
                 Shape the future of <span className="text-[#0071E3]">digital health</span> in Africa.
@@ -108,7 +107,7 @@ export default function CareersPage() {
               <div className="bg-[#F5F5F7] rounded-3xl p-20 text-center border border-dashed border-gray-300">
                 <Briefcase className="w-12 h-12 text-[#86868B] mx-auto mb-6 opacity-20" />
                 <h3 className="text-xl font-bold mb-2">No open roles right now</h3>
-                <p className="text-[#86868B] font-medium mb-8">We're always looking for talent. Send your CV to careers@afyalinks.com</p>
+                <p className="text-[#86868B] font-medium mb-8">We&apos;re always looking for talent. Send your CV to careers@afyalinks.com</p>
                 <Link href="/contact" className="text-[#0071E3] font-bold inline-flex items-center gap-1 hover:underline">
                   Contact HR <ArrowRight className="w-4 h-4" />
                 </Link>
