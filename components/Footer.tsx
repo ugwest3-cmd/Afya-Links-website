@@ -90,11 +90,9 @@ export default function Footer() {
 
         <div className="pt-10 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs font-medium text-[#86868B]">
-            © {currentYear} Afya Links Digital Healthcare. Designed with precision in Uganda.
+            © {currentYear} Afya Links Digital Healthcare.
           </p>
           <div className="flex gap-8">
-            <a href="#" className="text-xs font-medium text-[#86868B] hover:text-[#1D1D1F] transition-colors">Accessibility</a>
-            <a href="#" className="text-xs font-medium text-[#86868B] hover:text-[#1D1D1F] transition-colors">System Status</a>
           </div>
         </div>
       </div>
