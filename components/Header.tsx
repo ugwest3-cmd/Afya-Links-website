@@ -21,8 +21,8 @@ export default function Header() {
     }`}>
       <nav className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="relative flex-shrink-0 flex items-center group h-16 w-64 lg:w-80">
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] sm:w-[500px] lg:w-[650px] h-32 flex items-center justify-start transition-transform group-hover:scale-105 pointer-events-none z-0">
+        <Link href="/" className="relative flex-shrink-0 flex items-center group h-16 w-48 sm:w-64">
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] lg:w-[650px] h-32 flex items-center justify-start transition-transform group-hover:scale-105 pointer-events-none z-0">
             <Image 
               src="/assets/logo.png" 
               alt="Afya Links Logo" 
@@ -34,33 +34,30 @@ export default function Header() {
           </div>
         </Link>
         
-        {/* Navigation and CTA Group */}
-        <div className="flex-1 flex items-center justify-end gap-6 lg:gap-10">
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {[
-              { name: 'About', href: '/about-us' },
-              { name: 'Features', href: '/features' },
-              { name: 'Blog', href: '/blog' },
-              { name: 'Contact', href: '/contact' }
-            ].map((item) => (
-              <Link 
-                key={item.name} 
-                href={item.href}
-                className="text-sm font-medium text-[#86868B] hover:text-[#1D1D1F] transition-colors relative z-10"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-6 relative z-10">
-            <Link href="/get-started" className="btn-apple-primary !py-2.5 !px-6 !text-sm flex items-center gap-2 group shadow-lg shadow-blue-500/10">
-              Get Started
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center justify-center gap-8 xl:gap-12 flex-1 px-10">
+          {[
+            { name: 'About', href: '/about-us' },
+            { name: 'Features', href: '/features' },
+            { name: 'Blog', href: '/blog' },
+            { name: 'Contact', href: '/contact' }
+          ].map((item) => (
+            <Link 
+              key={item.name} 
+              href={item.href}
+              className="text-sm font-medium text-[#86868B] hover:text-[#1D1D1F] transition-colors relative z-10 whitespace-nowrap"
+            >
+              {item.name}
             </Link>
-          </div>
+          ))}
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="hidden md:flex items-center gap-4 lg:gap-6 flex-shrink-0 relative z-10">
+          <Link href="/get-started" className="btn-apple-primary !py-2.5 !px-6 !text-sm flex items-center gap-2 group shadow-lg shadow-blue-500/10 whitespace-nowrap">
+            Get Started
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
