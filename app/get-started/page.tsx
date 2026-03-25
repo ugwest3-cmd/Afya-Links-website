@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Download, ArrowRight, ShieldCheck, Zap, Smartphone, ClipboardCheck, UserCheck } from 'lucide-react'
+import { Download, ArrowRight, ShieldCheck, ClipboardCheck, UserCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Get Started - Afya Links',
