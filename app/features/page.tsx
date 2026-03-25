@@ -81,16 +81,20 @@ export default function Features() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
-            <div className="relative rounded-2xl h-[600px] shadow-2xl border-8 border-gray-900 overflow-hidden group">
-               <Image 
-                 src="/assets/clinic-preview.jpg" 
-                 alt="Clinic App Preview" 
-                 fill
-                 className="object-cover"
-               />
-               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                 <p className="text-white font-bold text-xl uppercase tracking-widest">Clinic Interface</p>
-               </div>
+            <div className="flex-1 w-full max-w-sm mx-auto lg:mx-0">
+              <div className="relative aspect-[9/19] rounded-[3rem] border-[10px] border-[#1D1D1F] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] overflow-hidden bg-white">
+                {/* Inner frame elements */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[25px] bg-[#1D1D1F] rounded-b-[15px] z-20"></div>
+                
+                <Image 
+                  src="/assets/clinic-preview.jpg" 
+                  alt="Clinic App Preview" 
+                  fill
+                  className="object-contain p-2 transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              {/* Subtle ground shadow */}
+              <div className="w-[80%] h-4 bg-black/10 blur-xl rounded-full mx-auto mt-8"></div>
             </div>
           </div>
         </div>
@@ -100,16 +104,20 @@ export default function Features() {
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl h-[600px] shadow-2xl border-8 border-gray-900 overflow-hidden group order-2 lg:order-1">
-               <Image 
-                 src="/assets/pharmacy-preview.jpg" 
-                 alt="Pharmacy App Preview" 
-                 fill
-                 className="object-cover"
-               />
-               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                 <p className="text-white font-bold text-xl uppercase tracking-widest">Pharmacy Interface</p>
-               </div>
+            <div className="flex-1 w-full max-w-sm mx-auto lg:mx-0 order-2 lg:order-1">
+              <div className="relative aspect-[9/19] rounded-[3rem] border-[10px] border-[#1D1D1F] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] overflow-hidden bg-white">
+                {/* Inner frame elements */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[25px] bg-[#1D1D1F] rounded-b-[15px] z-20"></div>
+                
+                <Image 
+                  src="/assets/pharmacy-preview.jpg" 
+                  alt="Pharmacy App Preview" 
+                  fill
+                  className="object-contain p-2 transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              {/* Subtle ground shadow */}
+              <div className="w-[80%] h-4 bg-black/10 blur-xl rounded-full mx-auto mt-8"></div>
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="heading-2 mb-6 text-gray-900 border-l-4 border-accent-600 pl-6">For Pharmacies</h2>
@@ -165,10 +173,20 @@ export default function Features() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
-            <div className="bg-gradient-to-br from-success-100 to-primary-100 rounded-2xl h-[500px] shadow-inner relative overflow-hidden group">
-               <div className="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                 <p className="font-semibold text-success-900">Driver App Preview</p>
-               </div>
+            <div className="flex-1 w-full max-w-sm mx-auto lg:mx-0">
+              <div className="relative aspect-[9/19] rounded-[3rem] border-[10px] border-[#1D1D1F] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] overflow-hidden bg-white">
+                {/* Inner frame elements */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[25px] bg-[#1D1D1F] rounded-b-[15px] z-20"></div>
+                
+                <Image 
+                  src="/assets/delivery-preview.jpg" 
+                  alt="Driver App Preview" 
+                  fill
+                  className="object-contain p-2 transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              {/* Subtle ground shadow */}
+              <div className="w-[80%] h-4 bg-black/10 blur-xl rounded-full mx-auto mt-8"></div>
             </div>
           </div>
         </div>
