@@ -156,8 +156,7 @@ export default function AboutUs() {
                  </div>
               </div>
               <h3 className="font-bold mb-2">Email</h3>
-              <p className="text-gray-600">bdplinksapps@gmail.com</p>
-              <p className="text-gray-600">tunanukireallan256@gmail.com</p>
+              <p className="text-gray-600">info@afyalinks.com</p>
             </div>
             <div className="p-6 text-center group">
               <div className="flex justify-center mb-4">

@@ -91,8 +91,21 @@ export default function Register() {
                   </ol>
                 </div>
 
-                <a href={type.appLink} target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block">
-                  {type.buttonText}
+                <a 
+                  href={type.appLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-4 px-8 py-4 rounded-2xl bg-[#1D1D1F] text-white hover:bg-black transition-all group shadow-2xl shadow-gray-900/10 w-full"
+                >
+                  <div className="bg-white/10 rounded-lg p-2 group-hover:bg-white/20 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[10px] uppercase font-bold tracking-[0.2em] text-white/50 leading-none mb-1">Download APK</p>
+                    <p className="text-lg font-bold leading-none">{type.title.split(' ')[0]} App</p>
+                  </div>
                 </a>
               </div>
             ))}
