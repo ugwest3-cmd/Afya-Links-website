@@ -10,7 +10,7 @@ export default function Register() {
   const registrationTypes = [
     {
       title: 'Clinic Registration',
-      icon: 'clinic-app',
+      icon: 'clinic-icon',
       description: 'Register your clinic to start sourcing medicines from verified pharmacies.',
       steps: [
         'Download the Clinic App',
@@ -24,7 +24,7 @@ export default function Register() {
     },
     {
       title: 'Pharmacy Registration',
-      icon: 'pharmacy-app',
+      icon: 'pharmacy-icon',
       description: 'Register your pharmacy to receive orders from clinics and earn commission.',
       steps: [
         'Download the Pharmacy App',
@@ -40,7 +40,7 @@ export default function Register() {
     },
     {
       title: 'Driver Registration',
-      icon: 'delivery-app',
+      icon: 'delivery-icon',
       description: 'Join our driver network and earn income from verified medicine deliveries.',
       steps: [
         'Download the Driver App',

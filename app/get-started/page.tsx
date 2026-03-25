@@ -12,12 +12,12 @@ export default function GetStarted() {
     {
       id: 'clinic',
       name: 'Clinic App',
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <Image src="/assets/clinic-icon.png" alt="Clinic App" width={48} height={48} />,
       themeColor: 'blue',
       bgColor: 'bg-blue-500',
       tagline: 'For Private Clinics & Drug Shops',
       desc: 'Source medicines, compare prices, and track orders in real-time.',
-      downloadUrl: '/downloads/clinic.apk',
+      downloadUrl: '/downloads/clinic_app-release.apk',
       screenshot: '/assets/clinic-preview.jpg',
       steps: [
         'Download the Clinic App',
@@ -30,12 +30,12 @@ export default function GetStarted() {
     {
       id: 'pharmacy',
       name: 'Pharmacy App',
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Image src="/assets/pharmacy-icon.png" alt="Pharmacy App" width={48} height={48} />,
       themeColor: 'primary',
       bgColor: 'bg-primary-600',
       tagline: 'For Wholesales & Distributors',
       desc: 'Manage inventory, handle digital invoicing, and track settlements.',
-      downloadUrl: '/downloads/pharmacy.apk',
+      downloadUrl: '/downloads/pharmacy_app-release.apk',
       screenshot: '/assets/pharmacy-preview.jpg',
       steps: [
         'Download the Pharmacy App',
@@ -50,13 +50,13 @@ export default function GetStarted() {
     {
       id: 'delivery',
       name: 'Driver App',
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <Image src="/assets/delivery-icon.png" alt="Driver App" width={48} height={48} />,
       themeColor: 'gray',
       bgColor: 'bg-gray-900',
       tagline: 'For Independent Delivery Drivers',
       desc: 'Get verified delivery requests and receive instant payments.',
-      downloadUrl: '/downloads/delivery.apk',
-      screenshot: '/assets/clinic-preview.jpg',
+      downloadUrl: '/downloads/delivery_app-release.apk',
+      screenshot: '/assets/delivery-preview.jpg',
       steps: [
         'Download the Driver App',
         'Create account with phone number',
