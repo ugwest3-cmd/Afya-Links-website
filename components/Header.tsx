@@ -22,12 +22,12 @@ export default function Header() {
       <nav className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group">
-          <div className="relative w-80 h-20 flex items-center justify-center transition-transform group-hover:scale-105">
+          <div className="relative w-[550px] h-32 flex items-center justify-center transition-transform group-hover:scale-105">
             <Image 
               src="/assets/logo.png" 
               alt="Afya Links Logo" 
-              width={320} 
-              height={80} 
+              width={550} 
+              height={128} 
               className="w-full h-full object-contain drop-shadow-sm" 
               priority
             />
