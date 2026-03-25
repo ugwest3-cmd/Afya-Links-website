@@ -42,12 +42,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex items-center mb-6 group">
-              <div className="relative w-[400px] h-16 flex items-center justify-center transition-transform group-hover:scale-105">
+              <div className="relative w-[550px] h-24 flex items-center justify-center transition-transform group-hover:scale-105">
                 <Image 
                   src="/assets/logo.png" 
                   alt="Afya Links Logo" 
-                  width={400} 
-                  height={64} 
+                  width={550} 
+                  height={96} 
                   className="w-full h-full object-contain drop-shadow-sm" 
                 />
               </div>
