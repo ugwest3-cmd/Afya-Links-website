@@ -120,7 +120,7 @@ export default function CareerDetailPage() {
                   <p className="text-gray-400 font-medium mb-10 relative z-10">We&apos;d love to hear from you. Applications are reviewed on a rolling basis.</p>
                   
                   <a 
-                    href={`mailto:careers@afyalinks.com?subject=Application for ${career.title}`}
+                    href={`mailto:info@getafyalinks.com?subject=Application for ${career.title}`}
                     className="w-full h-16 bg-[#0071E3] hover:bg-[#0077ED] active:scale-[0.98] text-white rounded-2xl font-bold flex items-center justify-center gap-3 transition-all relative z-10 shadow-xl shadow-blue-500/10"
                   >
                     Apply for this position <Send className="w-5 h-5" />

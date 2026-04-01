@@ -85,7 +85,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:3001/api
 
 ### Production (Vercel Settings)
 ```
-NEXT_PUBLIC_API_BASE_URL=https://api.afyalinks.com/api
+NEXT_PUBLIC_API_BASE_URL=https://api.getafyalinks.com/api
 ```
 
 ## Backend API Integration

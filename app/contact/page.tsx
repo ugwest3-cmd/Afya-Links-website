@@ -35,8 +35,8 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Email</h4>
-                  <a href="mailto:info@afyalinks.com" className="text-primary-600 hover:underline">
-                    info@afyalinks.com
+                  <a href="mailto:info@getafyalinks.com" className="text-primary-600 hover:underline">
+                    info@getafyalinks.com
                   </a>
                 </div>
                 <div>

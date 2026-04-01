@@ -102,7 +102,7 @@ export default function CareersPage() {
               <div className="bg-[#F5F5F7] rounded-3xl p-20 text-center border border-dashed border-gray-300">
                 <Briefcase className="w-12 h-12 text-[#86868B] mx-auto mb-6 opacity-20" />
                 <h3 className="text-xl font-bold mb-2">No open roles right now</h3>
-                <p className="text-[#86868B] font-medium mb-8">We&apos;re always looking for talent. Send your CV to careers@afyalinks.com</p>
+                <p className="text-[#86868B] font-medium mb-8">We&apos;re always looking for talent. Send your CV to info@getafyalinks.com</p>
                 <Link href="/contact" className="text-[#0071E3] font-bold inline-flex items-center gap-1 hover:underline">
                   Contact HR <ArrowRight className="w-4 h-4" />
                 </Link>

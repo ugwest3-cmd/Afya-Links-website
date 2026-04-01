@@ -25,10 +25,10 @@ export default function Header() {
   }, [isOpen])
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/80 backdrop-blur-apple border-b border-gray-200/50 py-3' : 'bg-transparent py-5'
+    <header className={`sticky top-0 z-50 transition-all duration-500 ${
+      scrolled ? 'bg-white/80 backdrop-blur-apple border-b border-gray-200/50 py-3' : 'bg-transparent py-4 md:py-6'
     }`}>
-      <nav className="container-custom flex items-center justify-between">
+      <nav className="container-custom flex items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="relative flex-shrink-0 flex items-center group h-12 w-32 sm:w-40 lg:w-48">
           <Image 

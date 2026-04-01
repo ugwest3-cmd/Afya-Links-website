@@ -249,7 +249,7 @@ export default function GetStarted() {
             Our specialized support team is available 24/7 to help you with installation and account verification.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-             <a href="mailto:info@afyalinks.com" className="btn-apple-secondary inline-flex items-center gap-3 !px-10">
+             <a href="mailto:info@getafyalinks.com" className="btn-apple-secondary inline-flex items-center gap-3 !px-10">
                Email Support
                <ArrowRight className="w-5 h-5" />
              </a>

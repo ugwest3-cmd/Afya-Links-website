@@ -28,7 +28,8 @@ website/
 │   ├── page.tsx                      # Home page
 │   ├── layout.tsx                    # Root layout
 │   ├── globals.css                   # Global styles
-│   ├── about/page.tsx                # About page
+│   ├── about-us/page.tsx             # About page (with Leadership)
+│   ├── sitemap.ts                    # Dynamic SEO sitemap
 │   ├── features/page.tsx             # Features page
 │   ├── pricing/page.tsx              # Pricing page
 │   ├── blog/page.tsx                 # Blog page
@@ -81,8 +82,9 @@ website/
 - Download app links
 - Live statistics
 
-### 2. **About Page** (`/about`)
+### 2. **About Page** (`/about-us`)
 - Mission and vision statements
+- Meet our Leadership (Team grid)
 - Core values (3 pillars)
 - How Afya Links operates (4 points)
 - Company narrative
@@ -175,7 +177,7 @@ POST /api/contact
 
 ### Environment Variables Required
 ```
-NEXT_PUBLIC_API_BASE_URL=https://api.afyalinks.com
+NEXT_PUBLIC_API_BASE_URL=https://api.getafyalinks.com
 ```
 
 ### Vercel Features Enabled
@@ -192,8 +194,9 @@ NEXT_PUBLIC_API_BASE_URL=https://api.afyalinks.com
 - ✅ Fully responsive design (mobile-first)
 - ✅ TypeScript for type safety
 - ✅ Tailwind CSS for styling
-- ✅ SEO metadata on all pages
+- ✅ SEO metadata (Authors, Creator, Publisher)
 - ✅ Open Graph tags for social sharing
+- ✅ Dynamic sitemap.ts generation
 - ✅ robots.txt for search engines
 - ✅ API integration layer
 - ✅ Contact form with backend support
@@ -325,4 +328,4 @@ The website is fully scaffolded and ready to:
 - See `QUICK_START.md` for immediate next steps
 
 **Built with ❤️ for Afya Links**  
-**Last Updated**: March 21, 2026
+**Last Updated**: April 1, 2026

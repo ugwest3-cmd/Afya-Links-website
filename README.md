@@ -103,7 +103,7 @@ vercel
 
 Set these in Vercel project settings:
 
-- `NEXT_PUBLIC_API_BASE_URL` - Your production backend URL (e.g., https://api.afyalinks.com)
+- `NEXT_PUBLIC_API_BASE_URL` - Your production backend URL (e.g., https://api.getafyalinks.com)
 
 ## Pages & Content
 
