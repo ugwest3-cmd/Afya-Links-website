@@ -15,23 +15,30 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+    return () => { document.body.style.overflow = 'auto' }
+  }, [isOpen])
+
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-white/80 backdrop-blur-apple border-b border-gray-200/50 py-3' : 'bg-transparent py-5'
     }`}>
       <nav className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="relative flex-shrink-0 flex items-center group h-16 w-32 sm:w-48 lg:w-64">
-          <div className="absolute -left-12 sm:-left-16 lg:-left-20 top-1/2 -translate-y-1/2 w-[400px] sm:w-[500px] lg:w-[650px] h-32 flex items-center justify-start transition-transform group-hover:scale-105 pointer-events-none z-0">
-            <Image 
-              src="/assets/logo.png" 
-              alt="Afya Links Logo" 
-              width={650} 
-              height={128} 
-              className="w-full h-full object-contain drop-shadow-sm" 
-              priority
-            />
-          </div>
+        <Link href="/" className="relative flex-shrink-0 flex items-center group h-12 w-32 sm:w-40 lg:w-48">
+          <Image 
+            src="/assets/logo.png" 
+            alt="Afya Links Logo" 
+            width={200} 
+            height={48} 
+            className="w-full h-full object-contain transition-transform group-hover:scale-105" 
+            priority
+          />
         </Link>
         
         {/* Desktop Navigation */}
@@ -71,26 +78,27 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 top-[72px] bg-white z-40 p-6 animate-in fade-in slide-in-from-top-4 duration-300">
-          <div className="flex flex-col gap-6">
+        <div className="md:hidden fixed inset-0 top-[72px] bg-white/95 backdrop-blur-xl z-40 p-6 flex flex-col animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="flex flex-col gap-6 mt-4">
             {[
               { name: 'About', href: '/about-us' },
               { name: 'Features', href: '/features' },
               { name: 'Blog', href: '/blog' },
               { name: 'Contact', href: '/contact' }
             ].map((item) => (
-              <div key={item.name} className="py-2">
+              <div key={item.name} className="py-2 border-b border-gray-100">
                 <Link 
                   href={item.href}
-                  className="text-2xl font-semibold text-[#1D1D1F]"
+                  className="text-xl font-medium text-[#1D1D1F] flex items-center justify-between"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
+                  <ArrowRight className="w-5 h-5 text-gray-400" />
                 </Link>
               </div>
             ))}
-            <div className="pt-6 border-t border-gray-100 flex flex-col gap-4">
-              <Link href="/get-started" className="btn-apple-primary !py-4 text-center text-lg flex items-center justify-center gap-2" onClick={() => setIsOpen(false)}>
+            <div className="mt-auto pb-10">
+              <Link href="/get-started" className="btn-apple-primary w-full !py-4 text-center text-lg flex items-center justify-center gap-2 shadow-xl shadow-blue-500/20" onClick={() => setIsOpen(false)}>
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </Link>
