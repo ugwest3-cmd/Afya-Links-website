@@ -220,31 +220,13 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="flex justify-center">
             {[
               {
                 name: 'Tunanukire Allan',
                 role: 'CEO & Founder',
                 image: '/images/team/ceo.jpg',
-                bio: 'Visionary leader with a deep commitment to transforming healthcare logistics through digital innovation.'
-              },
-              {
-                name: 'Dr. Jane Smith',
-                role: 'Medical Advisor',
-                image: 'https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=800&auto=format&fit=crop',
-                bio: 'Expert in pharmaceutical compliance and clinical operations with over 15 years in East African healthcare.'
-              },
-              {
-                name: 'David Korir',
-                role: 'Operations Lead',
-                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
-                bio: 'Master of supply chain efficiency, ensuring that every delivery reaches its destination on time, every time.'
-              },
-              {
-                name: 'Sarah Nakato',
-                role: 'Head of Growth',
-                image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop',
-                bio: 'Dedicated to building strong partnerships with pharmacies and clinics across the continent.'
+                bio: 'Visionary leader with a deep commitment to transforming healthcare logistics through digital innovation and sustainable pharmaceutical supply chains.'
               }
             ].map((member, idx) => (
               <motion.div 
@@ -253,9 +235,9 @@ export default function AboutUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.8 }}
-                className="glass-card-premium p-8 rounded-[40px] text-center group"
+                className="glass-card-premium p-8 rounded-[40px] text-center group max-w-sm"
               >
-                <div className="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-2xl transition-transform duration-700 group-hover:scale-105">
+                <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-2xl transition-transform duration-700 group-hover:scale-105">
                   <img 
                     src={member.image} 
                     alt={member.name} 
