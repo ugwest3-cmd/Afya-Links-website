@@ -46,6 +46,7 @@ export default function Header() {
           {[
             { name: 'About', href: '/about-us' },
             { name: 'Features', href: '/features' },
+            { name: 'Blog', href: '/blog' },
             { name: 'Contact', href: '/contact' }
           ].map((item) => (
             <Link 
@@ -82,6 +83,7 @@ export default function Header() {
             {[
               { name: 'About', href: '/about-us' },
               { name: 'Features', href: '/features' },
+              { name: 'Blog', href: '/blog' },
               { name: 'Contact', href: '/contact' }
             ].map((item) => (
               <div key={item.name} className="py-2 border-b border-gray-100">
