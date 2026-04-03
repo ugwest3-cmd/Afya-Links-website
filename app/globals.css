@@ -30,7 +30,7 @@
     @apply text-2xl md:text-3xl font-semibold tracking-[-0.01em];
   }
 
-  .btn-apple-primary {
+  .btn-apple-primary, .btn-primary {
     @apply px-8 py-4 bg-[#0071E3] text-white font-semibold rounded-[28px] hover:bg-[#0077ED] transition-all duration-300 scale-100 active:scale-95;
   }
 

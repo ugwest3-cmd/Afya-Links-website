@@ -145,7 +145,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn-primary w-full disabled:opacity-50"
+          className="btn-apple-primary w-full disabled:opacity-50"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
