@@ -50,9 +50,10 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Follow Us</h4>
                   <div className="flex gap-4">
-                    <a href="#" className="text-primary-600 hover:text-primary-700">Twitter</a>
-                    <a href="#" className="text-primary-600 hover:text-primary-700">LinkedIn</a>
-                    <a href="#" className="text-primary-600 hover:text-primary-700">Facebook</a>
+                    <a href="https://x.com/afyalinks" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">Twitter</a>
+                    <a href="https://ug.linkedin.com/in/tunanukire-allan-86872b3a8" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">LinkedIn</a>
+                    <a href="https://www.facebook.com/afyalinkapp/" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">Facebook</a>
+                    <a href="https://www.instagram.com/afyalinksapp" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">Instagram</a>
                   </div>
                 </div>
               </div>

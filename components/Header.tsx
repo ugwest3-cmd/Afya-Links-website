@@ -30,12 +30,12 @@ export default function Header() {
     }`}>
       <nav className="container-custom flex items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="relative flex-shrink-0 flex items-center group h-12 w-32 sm:w-40 lg:w-48">
+        <Link href="/" className="relative flex-shrink-0 flex items-center group h-16 w-40 sm:w-48 lg:w-64">
           <Image 
             src="/assets/logo.png" 
             alt="Afya Links Logo" 
-            width={200} 
-            height={48} 
+            width={256} 
+            height={64} 
             className="w-full h-full object-contain transition-transform group-hover:scale-105" 
             priority
           />
@@ -46,7 +46,6 @@ export default function Header() {
           {[
             { name: 'About', href: '/about-us' },
             { name: 'Features', href: '/features' },
-            { name: 'Blog', href: '/blog' },
             { name: 'Contact', href: '/contact' }
           ].map((item) => (
             <Link 
@@ -83,7 +82,6 @@ export default function Header() {
             {[
               { name: 'About', href: '/about-us' },
               { name: 'Features', href: '/features' },
-              { name: 'Blog', href: '/blog' },
               { name: 'Contact', href: '/contact' }
             ].map((item) => (
               <div key={item.name} className="py-2 border-b border-gray-100">

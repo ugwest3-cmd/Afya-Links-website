@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Twitter, Linkedin, Facebook, ArrowUpRight } from 'lucide-react'
+import { Twitter, Linkedin, Facebook, Instagram, ArrowUpRight } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -21,7 +21,6 @@ export default function Footer() {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about-us' },
-        { name: 'Blog', href: '/blog' },
         { name: 'Contact', href: '/contact' },
         { name: 'Careers', href: '/careers' },
       ]
@@ -56,10 +55,17 @@ export default function Footer() {
               Redefining pharmaceutical distribution with precision, speed, and digital trust.
             </p>
             <div className="flex gap-4">
-              {[Twitter, Linkedin, Facebook].map((Icon, idx) => (
+              {[
+                { Icon: Twitter, href: "https://x.com/afyalinks" },
+                { Icon: Linkedin, href: "https://ug.linkedin.com/in/tunanukire-allan-86872b3a8" },
+                { Icon: Facebook, href: "https://www.facebook.com/afyalinkapp/" },
+                { Icon: Instagram, href: "https://www.instagram.com/afyalinksapp" }
+              ].map(({ Icon, href }, idx) => (
                 <a 
                   key={idx} 
-                  href="#" 
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#86868B] hover:text-[#0071E3] hover:border-[#0071E3] transition-all"
                 >
                   <Icon className="w-5 h-5" />
