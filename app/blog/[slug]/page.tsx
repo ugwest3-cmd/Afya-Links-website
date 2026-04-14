@@ -6,8 +6,9 @@ import { ArrowLeft, Calendar } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 
 async function getBlog(slug: string) {
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://afya-links-production.up.railway.app/api';
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs/${slug}`, { 
+    const res = await fetch(`${baseUrl}/blogs/${slug}`, { 
       cache: 'no-store' 
     })
     if (!res.ok) {

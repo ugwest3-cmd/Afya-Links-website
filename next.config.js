@@ -5,9 +5,19 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "lh3.googleusercontent.com",
-        port: "",
-        pathname: "/sitesv/**",
       },
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+      },
+      {
+        protocol: "https",
+        hostname: "iovoktoweqtexglrhtxo.supabase.co",
+      },
+      {
+        protocol: "https",
+        hostname: "**.googleusercontent.com",
+      }
     ],
   },
 };

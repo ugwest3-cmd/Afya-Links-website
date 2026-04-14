@@ -1,6 +1,6 @@
 import { BlogPost, PlatformMetrics, ContactFormData, ContactResponse } from './types'
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3001/api'
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://afya-links-production.up.railway.app/api'
 
 class ApiClient {
   private baseUrl: string
@@ -34,11 +34,11 @@ class ApiClient {
   // Blog endpoints
   async getBlogPosts(limit?: number): Promise<BlogPost[]> {
     const query = limit ? `?limit=${limit}` : ''
-    return this.fetch<BlogPost[]>(`/blog${query}`)
+    return this.fetch<BlogPost[]>(`/blogs${query}`)
   }
 
   async getBlogPost(slug: string): Promise<BlogPost> {
-    return this.fetch<BlogPost>(`/blog/${slug}`)
+    return this.fetch<BlogPost>(`/blogs/${slug}`)
   }
 
   // Metrics endpoints

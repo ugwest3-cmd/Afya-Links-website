@@ -9,8 +9,9 @@ export const metadata: Metadata = {
 }
 
 async function getBlogs() {
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://afya-links-production.up.railway.app/api';
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs`, { 
+    const res = await fetch(`${baseUrl}/blogs`, { 
       cache: 'no-store' 
     })
     if (!res.ok) return []
