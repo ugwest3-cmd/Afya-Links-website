@@ -6,21 +6,24 @@ import { ArrowLeft, Calendar } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 
 async function getBlog(slug: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://afya-links-production.up.railway.app/api';
-  try {
-    const res = await fetch(`${baseUrl}/blogs/${slug}`, { 
-      cache: 'no-store' 
-    })
-    if (!res.ok) {
-        if(res.status === 404) return null;
-        throw new Error('Failed to fetch blog')
+  const envUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+  const prodUrl = 'https://afya-links-production.up.railway.app/api';
+  
+  const urlsToTry = [envUrl, prodUrl].filter(Boolean) as string[];
+
+  for (const baseUrl of urlsToTry) {
+    try {
+      const res = await fetch(`${baseUrl}/blogs/${slug}`, { cache: 'no-store' });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && data.blog) return data.blog;
+      }
+      if (res.status === 404) return null;
+    } catch (error) {
+      console.error(`Error fetching from ${baseUrl}:`, error);
     }
-    const data = await res.json()
-    return data.blog
-  } catch (error) {
-    console.error('Error fetching blog:', error)
-    return null
   }
+  return null;
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

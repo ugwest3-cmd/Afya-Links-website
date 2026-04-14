@@ -9,18 +9,31 @@ export const metadata: Metadata = {
 }
 
 async function getBlogs() {
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://afya-links-production.up.railway.app/api';
-  try {
-    const res = await fetch(`${baseUrl}/blogs`, { 
-      cache: 'no-store' 
-    })
-    if (!res.ok) return []
-    const data = await res.json()
-    return data.blogs || []
-  } catch (error) {
-    console.error('Error fetching blogs:', error)
-    return []
+  const envUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+  const prodUrl = 'https://afya-links-production.up.railway.app/api';
+  
+  // List of URLs to try
+  const urlsToTry = [envUrl, prodUrl].filter(Boolean) as string[];
+
+  for (const baseUrl of urlsToTry) {
+    try {
+      console.log(`[Blog] Attempting to fetch from: ${baseUrl}/blogs`);
+      const res = await fetch(`${baseUrl}/blogs`, { cache: 'no-store' });
+      
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && data.blogs) {
+          console.log(`[Blog] Successfully fetched ${data.blogs.length} posts from ${baseUrl}`);
+          return data.blogs;
+        }
+      }
+      console.warn(`[Blog] Failed fetch from ${baseUrl}: Status ${res.status}`);
+    } catch (error) {
+      console.error(`[Blog] Error fetching from ${baseUrl}:`, error);
+    }
   }
+
+  return [];
 }
 
 export default async function Blog() {
